@@ -5,7 +5,7 @@ import {libraryCharacters} from './library.mjs';
 export const photoCharacters=Object.freeze([
   {
     "shape": "photo_fragrance",
-    "name": "香氛街区",
+    "name": "小梨",
     "key": "fragrance",
     "number": "32",
     "kind": "photo",
@@ -14,7 +14,7 @@ export const photoCharacters=Object.freeze([
   },
   {
     "shape": "photo_lotus",
-    "name": "江南贵女",
+    "name": "绾绾",
     "key": "lotus",
     "number": "33",
     "kind": "photo",
@@ -23,7 +23,7 @@ export const photoCharacters=Object.freeze([
   },
   {
     "shape": "photo_designweek",
-    "name": "设计周广场",
+    "name": "桃乐",
     "key": "designweek",
     "number": "34",
     "kind": "photo",
@@ -32,7 +32,7 @@ export const photoCharacters=Object.freeze([
   },
   {
     "shape": "photo_metro",
-    "name": "地铁广场",
+    "name": "阿晴",
     "key": "metro",
     "number": "35",
     "kind": "photo",
@@ -41,7 +41,7 @@ export const photoCharacters=Object.freeze([
   },
   {
     "shape": "photo_skywalk",
-    "name": "空中连廊",
+    "name": "乔安",
     "key": "skywalk",
     "number": "36",
     "kind": "photo",
@@ -50,7 +50,7 @@ export const photoCharacters=Object.freeze([
   },
   {
     "shape": "photo_park",
-    "name": "公园日常",
+    "name": "鹿小满",
     "key": "park",
     "number": "37",
     "kind": "photo",
@@ -59,7 +59,7 @@ export const photoCharacters=Object.freeze([
   },
   {
     "shape": "photo_citynight",
-    "name": "城市夜色",
+    "name": "黛琳",
     "key": "citynight",
     "number": "38",
     "kind": "photo",
@@ -68,7 +68,7 @@ export const photoCharacters=Object.freeze([
   },
   {
     "shape": "photo_flowerfield",
-    "name": "山野花田",
+    "name": "麦穗",
     "key": "flowerfield",
     "number": "39",
     "kind": "photo",
@@ -77,7 +77,7 @@ export const photoCharacters=Object.freeze([
   },
   {
     "shape": "photo_sunnybeach",
-    "name": "海滩晴蓝",
+    "name": "夏柠",
     "key": "sunnybeach",
     "number": "40",
     "kind": "photo",
@@ -86,7 +86,7 @@ export const photoCharacters=Object.freeze([
   },
   {
     "shape": "photo_seabreeze",
-    "name": "海风白裙",
+    "name": "沐沐",
     "key": "seabreeze",
     "number": "41",
     "kind": "photo",
@@ -95,7 +95,7 @@ export const photoCharacters=Object.freeze([
   },
   {
     "shape": "photo_lakecafe",
-    "name": "湖畔咖啡",
+    "name": "林听澜",
     "key": "lakecafe",
     "number": "42",
     "kind": "photo",
