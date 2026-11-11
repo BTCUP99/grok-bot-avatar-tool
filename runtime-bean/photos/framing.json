@@ -5,7 +5,7 @@
   "portraits": [
     {
       "key": "fragrance",
-      "name": "香氛街区",
+      "name": "小梨",
       "sourceSize": [
         940,
         1672
@@ -23,7 +23,7 @@
     },
     {
       "key": "lotus",
-      "name": "江南贵女",
+      "name": "绾绾",
       "sourceSize": [
         941,
         1672
@@ -41,7 +41,7 @@
     },
     {
       "key": "designweek",
-      "name": "设计周广场",
+      "name": "桃乐",
       "sourceSize": [
         941,
         1672
@@ -59,7 +59,7 @@
     },
     {
       "key": "metro",
-      "name": "地铁广场",
+      "name": "阿晴",
       "sourceSize": [
         941,
         1672
@@ -77,7 +77,7 @@
     },
     {
       "key": "skywalk",
-      "name": "空中连廊",
+      "name": "乔安",
       "sourceSize": [
         941,
         1672
@@ -95,7 +95,7 @@
     },
     {
       "key": "park",
-      "name": "公园日常",
+      "name": "鹿小满",
       "sourceSize": [
         1024,
         1536
@@ -113,7 +113,7 @@
     },
     {
       "key": "citynight",
-      "name": "城市夜色",
+      "name": "黛琳",
       "sourceSize": [
         1024,
         1536
@@ -131,7 +131,7 @@
     },
     {
       "key": "flowerfield",
-      "name": "山野花田",
+      "name": "麦穗",
       "sourceSize": [
         1024,
         1536
@@ -149,7 +149,7 @@
     },
     {
       "key": "sunnybeach",
-      "name": "海滩晴蓝",
+      "name": "夏柠",
       "sourceSize": [
         1024,
         1536
@@ -167,7 +167,7 @@
     },
     {
       "key": "seabreeze",
-      "name": "海风白裙",
+      "name": "沐沐",
       "sourceSize": [
         1024,
         1536
@@ -185,7 +185,7 @@
     },
     {
       "key": "lakecafe",
-      "name": "湖畔咖啡",
+      "name": "林听澜",
       "sourceSize": [
         1024,
         1536

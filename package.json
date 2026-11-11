@@ -1,6 +1,6 @@
 {
   "name": "grok-bot-avatar-tool",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "description": "Thirty-one native avatars and eleven interactive portrait avatars, independently selectable per Bot.",
   "type": "module",
   "license": "MIT",

@@ -2,9 +2,9 @@
 
 给 Grok Bot 换上原创头像：**31 款动态角色 + 11 款虚拟人物头像，共 42 款**。每个独立 Bot 都能在自己的头像窗口选择，并分别记住选择。
 
-**[下载 macOS Apple Silicon 完整包](https://github.com/BTCUP99/grok-bot-avatar-tool/releases/download/v1.4.3/GrokBotAvatarTool-1.4.3-macOS-arm64.zip)** · [版本说明与其他下载](https://github.com/BTCUP99/grok-bot-avatar-tool/releases/tag/v1.4.3) · [报告兼容问题](https://github.com/BTCUP99/grok-bot-avatar-tool/issues)
+**[下载 macOS Apple Silicon 完整包](https://github.com/BTCUP99/grok-bot-avatar-tool/releases/download/v1.4.4/GrokBotAvatarTool-1.4.4-macOS-arm64.zip)** · [版本说明与其他下载](https://github.com/BTCUP99/grok-bot-avatar-tool/releases/tag/v1.4.4) · [报告兼容问题](https://github.com/BTCUP99/grok-bot-avatar-tool/issues)
 
-当前发布为 **v1.4.3 社区预览版**。完整包自带 Node.js，解压后双击启动，无需安装开发环境。请下载名称带 **macOS-arm64** 的 ZIP；GitHub 自动生成的 Source code 压缩包只包含源码。
+当前发布为 **v1.4.4 社区预览版**。完整包自带 Node.js，解压后双击启动，无需安装开发环境。请下载名称带 **macOS-arm64** 的 ZIP；GitHub 自动生成的 Source code 压缩包只包含源码。
 
 ## 头像展示
 
@@ -20,21 +20,21 @@
 
 <table>
   <tr>
-    <td align="center"><a href="runtime-bean/photos/fragrance.png"><img src="runtime-bean/photos/fragrance.png" alt="香氛街区头像" width="120" height="120"></a><br>香氛街区</td>
-    <td align="center"><a href="runtime-bean/photos/lotus.png"><img src="runtime-bean/photos/lotus.png" alt="江南贵女头像" width="120" height="120"></a><br>江南贵女</td>
-    <td align="center"><a href="runtime-bean/photos/designweek.png"><img src="runtime-bean/photos/designweek.png" alt="设计周广场头像" width="120" height="120"></a><br>设计周广场</td>
-    <td align="center"><a href="runtime-bean/photos/metro.png"><img src="runtime-bean/photos/metro.png" alt="地铁广场头像" width="120" height="120"></a><br>地铁广场</td>
+    <td align="center"><a href="runtime-bean/photos/fragrance.png"><img src="runtime-bean/photos/fragrance.png" alt="小梨头像" width="120" height="120"></a><br>小梨</td>
+    <td align="center"><a href="runtime-bean/photos/lotus.png"><img src="runtime-bean/photos/lotus.png" alt="绾绾头像" width="120" height="120"></a><br>绾绾</td>
+    <td align="center"><a href="runtime-bean/photos/designweek.png"><img src="runtime-bean/photos/designweek.png" alt="桃乐头像" width="120" height="120"></a><br>桃乐</td>
+    <td align="center"><a href="runtime-bean/photos/metro.png"><img src="runtime-bean/photos/metro.png" alt="阿晴头像" width="120" height="120"></a><br>阿晴</td>
   </tr>
   <tr>
-    <td align="center"><a href="runtime-bean/photos/skywalk.png"><img src="runtime-bean/photos/skywalk.png" alt="空中连廊头像" width="120" height="120"></a><br>空中连廊</td>
-    <td align="center"><a href="runtime-bean/photos/park.png"><img src="runtime-bean/photos/park.png" alt="公园日常头像" width="120" height="120"></a><br>公园日常</td>
-    <td align="center"><a href="runtime-bean/photos/citynight.png"><img src="runtime-bean/photos/citynight.png" alt="城市夜色头像" width="120" height="120"></a><br>城市夜色</td>
-    <td align="center"><a href="runtime-bean/photos/flowerfield.png"><img src="runtime-bean/photos/flowerfield.png" alt="山野花田头像" width="120" height="120"></a><br>山野花田</td>
+    <td align="center"><a href="runtime-bean/photos/skywalk.png"><img src="runtime-bean/photos/skywalk.png" alt="乔安头像" width="120" height="120"></a><br>乔安</td>
+    <td align="center"><a href="runtime-bean/photos/park.png"><img src="runtime-bean/photos/park.png" alt="鹿小满头像" width="120" height="120"></a><br>鹿小满</td>
+    <td align="center"><a href="runtime-bean/photos/citynight.png"><img src="runtime-bean/photos/citynight.png" alt="黛琳头像" width="120" height="120"></a><br>黛琳</td>
+    <td align="center"><a href="runtime-bean/photos/flowerfield.png"><img src="runtime-bean/photos/flowerfield.png" alt="麦穗头像" width="120" height="120"></a><br>麦穗</td>
   </tr>
   <tr>
-    <td align="center"><a href="runtime-bean/photos/sunnybeach.png"><img src="runtime-bean/photos/sunnybeach.png" alt="海滩晴蓝头像" width="120" height="120"></a><br>海滩晴蓝</td>
-    <td align="center"><a href="runtime-bean/photos/seabreeze.png"><img src="runtime-bean/photos/seabreeze.png" alt="海风白裙头像" width="120" height="120"></a><br>海风白裙</td>
-    <td align="center"><a href="runtime-bean/photos/lakecafe.png"><img src="runtime-bean/photos/lakecafe.png" alt="湖畔咖啡头像" width="120" height="120"></a><br>湖畔咖啡</td>
+    <td align="center"><a href="runtime-bean/photos/sunnybeach.png"><img src="runtime-bean/photos/sunnybeach.png" alt="夏柠头像" width="120" height="120"></a><br>夏柠</td>
+    <td align="center"><a href="runtime-bean/photos/seabreeze.png"><img src="runtime-bean/photos/seabreeze.png" alt="沐沐头像" width="120" height="120"></a><br>沐沐</td>
+    <td align="center"><a href="runtime-bean/photos/lakecafe.png"><img src="runtime-bean/photos/lakecafe.png" alt="林听澜头像" width="120" height="120"></a><br>林听澜</td>
     <td></td>
   </tr>
 </table>

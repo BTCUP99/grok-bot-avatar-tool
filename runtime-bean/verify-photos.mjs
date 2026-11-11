@@ -40,8 +40,8 @@ const cards=elements=>elements.filter(n=>n.props?.['aria-label']?.startsWith('�
 let render=editorFor(local),elements=render();assert.equal(cards(elements).length,31);
 button(elements,'写真头像').props.onClick();elements=render();assert.equal(cards(elements).length,11);
 assert.equal(store.shapeFor(target),'robot_titan','Opening photo tab must not apply');
-elements.find(n=>n.props?.['aria-label']==='搜索写真头像').props.onChange({target:{value:'湖畔'}});elements=render();
-assert.equal(cards(elements).length,1);assert.equal(cards(elements)[0].props['aria-label'],'选择湖畔咖啡');
+elements.find(n=>n.props?.['aria-label']==='搜索写真头像').props.onChange({target:{value:last.name}});elements=render();
+assert.equal(cards(elements).length,1);assert.equal(cards(elements)[0].props['aria-label'],'选择'+last.name);
 elements.find(n=>n.type==='input').props.onChange({target:{value:''}});elements=render();
 button(elements,'选择'+first.name).props.onClick();elements=render();button(elements,'取消').props.onClick();
 assert.equal(closed,1);assert.equal(selectionEvents.length,0);assert.equal(store.shapeFor(target),'robot_titan');
