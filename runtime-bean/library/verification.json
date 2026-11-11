@@ -1,0 +1,302 @@
+{
+  "passed": true,
+  "toolVersion": "1.2.0",
+  "verifiedAt": "2026-11-04T16:21:39.248Z",
+  "appVersion": "0.78.4",
+  "architecture": "arm64",
+  "characters": 31,
+  "newCharacters": 20,
+  "offline": {
+    "poseSizeRenders": 1240,
+    "nativeStates": 53,
+    "stateRenders": 4929,
+    "nativeGazeCycles": 93,
+    "originalShapesUnchanged": 25,
+    "originalPoseComparisons": 75,
+    "blinkWorkingAndCompletionPassed": true
+  },
+  "window": {
+    "visibleNativeWindowRequired": true,
+    "all31SelectedAndPersisted": true,
+    "sizesCssPx": [
+      36,
+      64
+    ],
+    "hoverCyclesPerSurface": 2,
+    "stablePoseObservations": 248,
+    "input": "native pointer, trusted:true, buttons:0",
+    "newCharacterWorkAndCompletionDemos": 20,
+    "actualBackendTasksRun": 0,
+    "botMessagesSent": 0,
+    "cloudAvatarUpdates": 0,
+    "officialOptionsPreserved": true,
+    "otherBotEditorUnchanged": true,
+    "normalRestartRestoresOriginal": true,
+    "launcherRestartRestoresSelection": true,
+    "searchAndCollections": true,
+    "noDemoOrAuditPanelInNormalMode": true
+  },
+  "assets": {
+    "transparent1024Png": 124,
+    "svgStates": 124,
+    "stateSheets": 31,
+    "sixPoseLibrarySpecs": 31
+  },
+  "preservation": {
+    "officialSignatureVerified": true,
+    "officialAsarUnchanged": true,
+    "allBotAvatarFieldsUnchanged": true,
+    "priorLocalSelectionRestored": true
+  },
+  "scope": "State feedback was exercised through clearly labelled local appearance demos; no backend tasks or Bot messages were sent. Offline measurements and actual native-window acceptance are separate.",
+  "perCharacter": [
+    {
+      "number": "01",
+      "name": "奶糖喵机",
+      "shape": "robot_milkcat",
+      "nativeHover": true,
+      "offlineStatesPassed": true,
+      "feedbackDemoThisRelease": false
+    },
+    {
+      "number": "02",
+      "name": "钛坦大力士",
+      "shape": "robot_titan",
+      "nativeHover": true,
+      "offlineStatesPassed": true,
+      "feedbackDemoThisRelease": false
+    },
+    {
+      "number": "03",
+      "name": "像素小子",
+      "shape": "robot_bitboy",
+      "nativeHover": true,
+      "offlineStatesPassed": true,
+      "feedbackDemoThisRelease": false
+    },
+    {
+      "number": "04",
+      "name": "泡泡水母",
+      "shape": "robot_jelly",
+      "nativeHover": true,
+      "offlineStatesPassed": true,
+      "feedbackDemoThisRelease": false
+    },
+    {
+      "number": "05",
+      "name": "赤焰鬼丸",
+      "shape": "robot_oni",
+      "nativeHover": true,
+      "offlineStatesPassed": true,
+      "feedbackDemoThisRelease": false
+    },
+    {
+      "number": "06",
+      "name": "月球邮差",
+      "shape": "robot_luna",
+      "nativeHover": true,
+      "offlineStatesPassed": true,
+      "feedbackDemoThisRelease": false
+    },
+    {
+      "number": "07",
+      "name": "苔藓园丁",
+      "shape": "robot_sprout",
+      "nativeHover": true,
+      "offlineStatesPassed": true,
+      "feedbackDemoThisRelease": false
+    },
+    {
+      "number": "08",
+      "name": "磁带电台",
+      "shape": "robot_radio",
+      "nativeHover": true,
+      "offlineStatesPassed": true,
+      "feedbackDemoThisRelease": false
+    },
+    {
+      "number": "09",
+      "name": "星核法师",
+      "shape": "robot_oracle",
+      "nativeHover": true,
+      "offlineStatesPassed": true,
+      "feedbackDemoThisRelease": false
+    },
+    {
+      "number": "10",
+      "name": "墨墨忍者",
+      "shape": "robot_ninja",
+      "nativeHover": true,
+      "offlineStatesPassed": true,
+      "feedbackDemoThisRelease": false
+    },
+    {
+      "number": "11",
+      "name": "霓虹夜行",
+      "shape": "neonNight",
+      "nativeHover": true,
+      "offlineStatesPassed": true,
+      "feedbackDemoThisRelease": false
+    },
+    {
+      "number": "12",
+      "name": "云朵鲸",
+      "shape": "robot_cloudwhale",
+      "nativeHover": true,
+      "offlineStatesPassed": true,
+      "feedbackDemoThisRelease": true
+    },
+    {
+      "number": "13",
+      "name": "熔岩吐司",
+      "shape": "robot_lavatoast",
+      "nativeHover": true,
+      "offlineStatesPassed": true,
+      "feedbackDemoThisRelease": true
+    },
+    {
+      "number": "14",
+      "name": "布丁幽灵",
+      "shape": "robot_puddingghost",
+      "nativeHover": true,
+      "offlineStatesPassed": true,
+      "feedbackDemoThisRelease": true
+    },
+    {
+      "number": "15",
+      "name": "折纸狐狸",
+      "shape": "robot_paperfox",
+      "nativeHover": true,
+      "offlineStatesPassed": true,
+      "feedbackDemoThisRelease": true
+    },
+    {
+      "number": "16",
+      "name": "苔岛山灵",
+      "shape": "robot_mossmountain",
+      "nativeHover": true,
+      "offlineStatesPassed": true,
+      "feedbackDemoThisRelease": true
+    },
+    {
+      "number": "17",
+      "name": "绒球刺猬",
+      "shape": "robot_pomhedgehog",
+      "nativeHover": true,
+      "offlineStatesPassed": true,
+      "feedbackDemoThisRelease": true
+    },
+    {
+      "number": "18",
+      "name": "泡泡章鱼",
+      "shape": "robot_bubbleocto",
+      "nativeHover": true,
+      "offlineStatesPassed": true,
+      "feedbackDemoThisRelease": true
+    },
+    {
+      "number": "19",
+      "name": "宇宙蜗牛",
+      "shape": "robot_cosmosnail",
+      "nativeHover": true,
+      "offlineStatesPassed": true,
+      "feedbackDemoThisRelease": true
+    },
+    {
+      "number": "20",
+      "name": "唱片黑洞",
+      "shape": "robot_vinylvoid",
+      "nativeHover": true,
+      "offlineStatesPassed": true,
+      "feedbackDemoThisRelease": true
+    },
+    {
+      "number": "21",
+      "name": "弹簧果冻",
+      "shape": "robot_jellytower",
+      "nativeHover": true,
+      "offlineStatesPassed": true,
+      "feedbackDemoThisRelease": true
+    },
+    {
+      "number": "22",
+      "name": "悬浮骰子",
+      "shape": "robot_luckydice",
+      "nativeHover": true,
+      "offlineStatesPassed": true,
+      "feedbackDemoThisRelease": true
+    },
+    {
+      "number": "23",
+      "name": "灯笼河豚",
+      "shape": "robot_lanternpuffer",
+      "nativeHover": true,
+      "offlineStatesPassed": true,
+      "feedbackDemoThisRelease": true
+    },
+    {
+      "number": "24",
+      "name": "星轨水滴",
+      "shape": "robot_stardrop",
+      "nativeHover": true,
+      "offlineStatesPassed": true,
+      "feedbackDemoThisRelease": true
+    },
+    {
+      "number": "25",
+      "name": "吐舌涂鸦",
+      "shape": "robot_graffitigloop",
+      "nativeHover": true,
+      "offlineStatesPassed": true,
+      "feedbackDemoThisRelease": true
+    },
+    {
+      "number": "26",
+      "name": "奶酪月球",
+      "shape": "robot_cheesemoon",
+      "nativeHover": true,
+      "offlineStatesPassed": true,
+      "feedbackDemoThisRelease": true
+    },
+    {
+      "number": "27",
+      "name": "绯红折翼",
+      "shape": "robot_foldbutterfly",
+      "nativeHover": true,
+      "offlineStatesPassed": true,
+      "feedbackDemoThisRelease": true
+    },
+    {
+      "number": "28",
+      "name": "翡翠仙人掌",
+      "shape": "robot_jadecactus",
+      "nativeHover": true,
+      "offlineStatesPassed": true,
+      "feedbackDemoThisRelease": true
+    },
+    {
+      "number": "29",
+      "name": "蘑菇占卜师",
+      "shape": "robot_moonshroom",
+      "nativeHover": true,
+      "offlineStatesPassed": true,
+      "feedbackDemoThisRelease": true
+    },
+    {
+      "number": "30",
+      "name": "天鹅绒蝠",
+      "shape": "robot_velvetbat",
+      "nativeHover": true,
+      "offlineStatesPassed": true,
+      "feedbackDemoThisRelease": true
+    },
+    {
+      "number": "31",
+      "name": "彩虹拓扑",
+      "shape": "robot_chromaknot",
+      "nativeHover": true,
+      "offlineStatesPassed": true,
+      "feedbackDemoThisRelease": true
+    }
+  ]
+}

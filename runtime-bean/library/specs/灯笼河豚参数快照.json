@@ -1,0 +1,172 @@
+{
+  "appVersion": "0.78.4",
+  "officialAsarSHA256": "cb4d43f733076d4c441907cd427691bcebab6ada2f03d913991d04bf5ae59d93",
+  "avatarSourceSHA256": "03bd56865384743dfb0ab8aef0a30302e71f9375bc28496142b72a938201350a",
+  "sourceDependencySHA256": {
+    "../avatar-designs/catalog-shapes.js": "3186ca9ce6ef8610b7c63802ef25ca2daf948a490fadd00c45f7fa620fd561b2",
+    "../avatar-designs/fantasy-shapes.js": "1420f4b668573d40e1944047764beaa4d0afbd0d138010783f5834ebca19470d",
+    "library.mjs": "af02ad7fef53ef89ff693d305af1e76f5ad980f42ff7bdf3fb7e097e66ace342",
+    "library-state.mjs": "d068fa2ff6091b45db5caaddbb23736ffd134f40e08813c298331506a9120874",
+    "library-bridge.js": "93b0b6cebd1043064b3adb7aabb7980c903328d70cffea6f6cd31b424b0a165c",
+    "library-picker.js": "f72dfcac06aca285162173140e05d78450c5ceba2cbfc31cd3b7ff65bec4d375",
+    "neon-state.mjs": "ed526a881b5e5fc20b8cda61b08ae6758d43690ad09d983ff447f04dd5c1b6c4",
+    "neon-shape.js": "3451e87c07e93dedae43e1a1e8d3d0141ae1d52dd976d63a723ed22508dee98f",
+    "milkcat-shape.js": "3790da744c01c06a22b9fde0b56842f28789f6fa1ebad8e9b68fad31ff2b9d3d"
+  },
+  "scope": "offline native-engine measurements; actual window hover evidence is separate",
+  "shape": "robot_lanternpuffer",
+  "geometry": {
+    "size": 1.26,
+    "kind": "extrusion",
+    "ballCount": 0,
+    "seat": "front"
+  },
+  "eyeLayout": {
+    "width": 0.23,
+    "height": 0.34,
+    "gap": 0.45,
+    "shiftY": 0.025
+  },
+  "observedAppDisplayCssPx": {
+    "sidebar": 36,
+    "profile": 64
+  },
+  "sharedSourceResolution": 192,
+  "views": [
+    {
+      "key": "rest",
+      "gaze": null,
+      "quaternionWXYZ": [
+        0.9169956148992757,
+        -0.19158116627165409,
+        0.2476740623943209,
+        0.2471300422906653
+      ],
+      "degrees": {
+        "pitch": -15.896271043294888,
+        "yaw": 33.29315635042974,
+        "roll": 25.38480127460161
+      },
+      "zoom": 0.6,
+      "offset": [
+        0,
+        0
+      ]
+    },
+    {
+      "key": "front",
+      "gaze": [
+        0,
+        0
+      ],
+      "quaternionWXYZ": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "zoom": 0.6,
+      "offset": [
+        0,
+        0
+      ]
+    },
+    {
+      "key": "left",
+      "gaze": [
+        -1,
+        0
+      ],
+      "quaternionWXYZ": [
+        0.9743700647852352,
+        0,
+        -0.224951054343865,
+        0
+      ],
+      "degrees": {
+        "pitch": 0,
+        "yaw": -26.000000000000007,
+        "roll": 0
+      },
+      "zoom": 0.6,
+      "offset": [
+        -0.07,
+        0
+      ]
+    },
+    {
+      "key": "right",
+      "gaze": [
+        1,
+        0
+      ],
+      "quaternionWXYZ": [
+        0.9743700647852352,
+        0,
+        0.224951054343865,
+        0
+      ],
+      "degrees": {
+        "pitch": 0,
+        "yaw": 26.000000000000007,
+        "roll": 0
+      },
+      "zoom": 0.6,
+      "offset": [
+        0.07,
+        0
+      ]
+    },
+    {
+      "key": "up",
+      "gaze": [
+        0,
+        1
+      ],
+      "quaternionWXYZ": [
+        0.9862856015372314,
+        -0.16504760586067765,
+        0,
+        0
+      ],
+      "degrees": {
+        "pitch": -19,
+        "yaw": 0,
+        "roll": 0
+      },
+      "zoom": 0.6,
+      "offset": [
+        0,
+        0.055
+      ]
+    },
+    {
+      "key": "down",
+      "gaze": [
+        0,
+        -1
+      ],
+      "quaternionWXYZ": [
+        0.9862856015372314,
+        0.16504760586067765,
+        0,
+        0
+      ],
+      "degrees": {
+        "pitch": 19,
+        "yaw": 0,
+        "roll": 0
+      },
+      "zoom": 0.6,
+      "offset": [
+        0,
+        -0.055
+      ]
+    }
+  ]
+}

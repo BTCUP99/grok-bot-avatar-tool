@@ -1,0 +1,173 @@
+// Wonder collection / 12–31. Original solid silhouettes, native projected paint.
+// No bitmap rotation, replacement pointer handler, or independent motion timer.
+const wonderStripe=(points,color,opacity=1)=>robotPaint(robotPoly(points),color,opacity);
+const wonderArc=(x,y,rx,ry,width,start=0,end=360)=>{
+  const points=[];
+  for(let i=0;i<=48;i++){const a=(start+(end-start)*i/48)*Math.PI/180;points.push([x+rx*Math.cos(a),y+ry*Math.sin(a)])}
+  for(let i=48;i>=0;i--){const a=(start+(end-start)*i/48)*Math.PI/180;points.push([x+(rx-width)*Math.cos(a),y+(ry-width)*Math.sin(a)])}
+  return robotPoly(points);
+};
+const wonderCatalog=[
+  {
+    key:'cloudwhale',name:'云朵鲸',english:'CLOUDWHALE / 12',tone:'天空软雕塑',tag:'云乳白 · 鲸尾 · 雨滴雀斑',
+    story:'一朵忘记下雨的云，长出了鲸鱼尾巴。把忙碌藏在额头的小雨滴里。',
+    bg:'#e2edf4',accent:'#527eac',colors:['#ffffff','#cce6f8','#7fa5cf'],eye:'#28476b',
+    outline:'M37 107 C17 96 16 63 43 59 C39 28 78 15 99 41 C114 8 158 12 170 43 C200 28 223 53 216 79 C237 87 240 112 222 127 C238 143 250 157 241 181 L215 172 Q219 198 200 209 L185 186 C165 226 119 242 78 222 C36 204 16 155 37 107Z',
+    depth:.48,bevel:.20,size:1.23,eyes:{width:.22,height:.37,gap:.44,shiftY:.015},
+    paint:[robotPaint(robotOval(-.08,-.39,.58,.24),'#f2f9ff'),robotPaint(robotOval(-.43,.48,.22,.12),'#ffffff',.9),wonderStripe([[.53,-.30],[.85,-.48],[.60,-.56]],'#6e99c5'),...[-.50,.50].flatMap(s=>[robotDot(s,-.17,.028,'#7eabd2'),robotDot(s+.07,-.22,.021,'#7eabd2')]),robotBar(0,-.43,.12,.035,'#6f93b8')],
+  },
+  {
+    key:'lavatoast',name:'熔岩吐司',english:'LAVATOAST / 13',tone:'炽热怪食物',tag:'焦糖外壳 · 岩浆裂纹 · 奶油心',
+    story:'看起来刚刚烤焦，其实正在用地心热量替你处理工作。笑起来像一块热黄油。',
+    bg:'#f4e1d2',accent:'#b65b32',colors:['#e79550','#8b4636','#382831'],eye:'#ffdf81',
+    outline:'M47 111 C8 96 13 45 50 29 Q126 -2 205 29 C243 47 246 94 210 112 L215 207 Q214 235 188 237 L67 237 Q39 235 41 207Z',
+    depth:.48,bevel:.09,size:1.22,eyes:{width:.26,height:.29,gap:.53,shiftY:.02},
+    paint:[robotPanel(1.30,1.39,-.02,'#c47743',.28),robotPanel(1.13,1.20,-.03,'#4b3030',.23),wonderStripe([[-.65,.49],[-.42,.34],[-.49,.16],[-.36,.05],[-.46,-.31],[-.37,-.55],[-.50,-.42],[-.57,-.05],[-.49,.16],[-.55,.33]],'#ffb947'),wonderStripe([[.55,.56],[.33,.38],[.45,.22],[.35,-.05],[.51,-.34],[.45,-.57],[.60,-.31],[.46,-.04],[.54,.23],[.45,.39]],'#ff783c'),robotBar(0,-.45,.29,.08,'#ffe5a0',.04),robotDot(-.28,.60,.025,'#643b30'),robotDot(.19,.68,.03,'#643b30')],
+  },
+  {
+    key:'puddingghost',name:'布丁幽灵',english:'PUDDING / 14',tone:'软糯小幽灵',tag:'薄荷乳白 · 波浪裙 · 透明糖衣',
+    story:'不吓人，只会偷偷把你的待办吃掉。它的裙边是一圈晃来晃去的布丁褶。',
+    bg:'#e7eee7',accent:'#68998c',colors:['#fcfff0','#cce9d6','#84baad'],eye:'#365a59',
+    outline:'M41 119 C40 54 70 19 126 18 C184 18 211 55 212 119 L236 191 Q248 216 226 225 Q211 229 197 211 Q188 205 179 222 Q166 246 147 226 Q128 208 111 229 Q90 247 77 222 Q67 207 55 220 Q32 240 18 219 Q6 201 25 180Z',
+    depth:.44,bevel:.21,size:1.23,eyes:{width:.23,height:.45,gap:.40,shiftY:.02},
+    paint:[robotPaint(robotOval(-.33,.49,.20,.09),'#ffffff',.8),...robotCheeks('#f0b8c0'),robotPaint(robotOval(0,-.36,.085,.11),'#6c8f88'),robotDot(0,-.34,.04,'#bfdcd2'),robotPaint(wonderArc(0,-.35,.64,.36,.045,195,345),'#a3cdb8',.8)],
+  },
+  {
+    key:'paperfox',name:'折纸狐狸',english:'PAPERFOX / 15',tone:'纸艺几何',tag:'珊瑚折面 · 尖耳 · 奶油鼻梁',
+    story:'一张不肯安静躺着的珊瑚色纸。转头时折面和厚度一起显露，像被风吹活了。',
+    bg:'#f3e1df',accent:'#b66359',colors:['#ffc8a5','#ec876e','#ad4d55'],eye:'#542f45',
+    outline:'M20 17 L96 63 L157 63 L237 17 L220 132 L182 198 L128 242 L69 198 L34 133Z',
+    depth:.25,bevel:.035,size:1.26,eyes:{width:.26,height:.25,gap:.51,shiftY:.04},
+    paint:[wonderStripe([[-.82,.86],[-.29,.43],[-.62,.37]],'#a44958'),wonderStripe([[.82,.86],[.29,.43],[.62,.37]],'#ffe4bc'),wonderStripe([[-.70,.10],[0,-.62],[-.45,-.47]],'#fff0cf'),wonderStripe([[.70,.10],[0,-.62],[.45,-.47]],'#ffc4a3'),wonderStripe([[0,.49],[-.25,-.22],[0,-.48],[.25,-.22]],'#ffe8c7'),wonderStripe([[0,.49],[0,-.48],[.25,-.22]],'#f6b197'),wonderStripe([[-.10,-.36],[.10,-.36],[0,-.47]],'#773a46')],
+  },
+  {
+    key:'mossmountain',name:'苔岛山灵',english:'MOSS ISLE / 16',tone:'微缩地貌',tag:'森林山体 · 雪冠 · 蓝绿溪流',
+    story:'一座长着眼睛的迷你浮岛。头顶四季积雪，脸颊有两道刚刚醒来的溪流。',
+    bg:'#dfeae2',accent:'#487969',colors:['#accc9c','#578b74','#2e565d'],eye:'#f3efbd',
+    outline:'M16 183 L63 101 L89 105 L123 15 Q130 3 139 20 L173 91 L194 72 L239 182 L217 219 L168 243 L77 239 L37 217Z',
+    depth:.52,bevel:.065,size:1.25,eyes:{width:.23,height:.31,gap:.47,shiftY:.13},
+    paint:[wonderStripe([[-.36,.39],[0,.96],[.40,.28],[.17,.42],[.04,.30],[-.09,.50],[-.23,.35]],'#edf3d8'),wonderStripe([[.07,.40],[.28,.13],[.13,-.21],[.26,-.53],[.13,-.70],[.08,-.37],[-.01,-.20],[.12,.07]],'#80d8cf'),wonderStripe([[-.72,-.32],[-.50,-.65],[-.05,-.80],[-.15,-.55]],'#3b675c'),wonderStripe([[.48,-.28],[.72,-.37],[.42,-.69],[.09,-.79]],'#244c54'),...[-.58,-.44,.55].map(x=>robotDot(x,-.29,.035,'#c5d89c'))],
+  },
+  {
+    key:'pomhedgehog',name:'绒球刺猬',english:'POM / 17',tone:'毛毡玩偶',tag:'焦糖绒刺 · 肚兜 · 小豆鼻',
+    story:'一团有边界感的毛球。刺是软的，眼神却认真得像一位微型管理员。',
+    bg:'#eee3d6',accent:'#8c7055',colors:['#d8b78d','#967253','#554b49'],eye:'#4a393a',
+    outline:'M128 10 L147 32 L174 16 L180 46 L212 43 L208 75 L239 89 L224 117 L245 140 L222 160 L233 190 L203 195 L196 224 L165 218 L146 242 L120 226 L92 241 L78 216 L47 223 L44 194 L17 179 L32 152 L12 127 L35 108 L24 78 L54 73 L57 42 L88 49 L102 20Z',
+    depth:.46,bevel:.12,size:1.25,eyes:{width:.20,height:.33,gap:.42,shiftY:.055},
+    paint:[robotPaint(robotOval(0,-.09,.64,.67),'#ecd4ae'),robotPaint(robotOval(-.20,.14,.37,.40),'#f9e6c3',.65),...[-1,1].flatMap(s=>[wonderStripe([[s*.54,.58],[s*.63,.70],[s*.60,.43]],'#ead3ae'),wonderStripe([[s*.74,.17],[s*.85,.25],[s*.73,-.05]],'#cba77b')]),robotPaint(robotOval(0,-.35,.10,.065),'#6e4f48'),...robotCheeks('#d4a18c')],
+  },
+  {
+    key:'bubbleocto',name:'泡泡章鱼',english:'BUBBLE OCTO / 18',tone:'深海软糖',tag:'葡萄紫 · 卷腕 · 吸盘珠',
+    story:'八只手忙着捉灵感，表情却永远从容。每颗吸盘都是一颗海底珍珠。',
+    bg:'#e8e0f0',accent:'#8966b3',colors:['#e6c9ff','#b28bdb','#6952a6'],eye:'#382e63',
+    outline:'M40 134 C12 67 58 14 125 17 C197 12 244 70 216 138 Q245 124 247 150 Q252 184 211 180 Q242 204 220 222 Q202 236 181 203 Q192 242 164 244 Q146 247 138 215 Q123 245 105 239 Q88 232 93 209 Q70 244 48 224 Q32 209 54 189 Q12 207 8 177 Q3 151 40 154Z',
+    depth:.47,bevel:.18,size:1.25,eyes:{width:.25,height:.41,gap:.48,shiftY:-.03},
+    paint:[robotPaint(robotOval(-.35,.54,.25,.11),'#f3e4ff',.8),...robotCheeks('#ce8fcd'),...[-.66,-.37,-.07,.23,.53].map((x,i)=>robotDot(x,-.54+(i%2)*.08,.05,'#e8b4e8')),robotBar(0,-.30,.11,.045,'#865297'),robotPaint(wonderArc(.43,.40,.16,.19,.04,20,160),'#d4edff',.8)],
+  },
+  {
+    key:'cosmosnail',name:'宇宙蜗牛',english:'SNAIL MAIL / 19',tone:'银河慢递',tag:'蓝紫螺旋 · 星点 · 长长触角',
+    story:'背着一整圈银河，慢慢把复杂问题搬回家。宇宙很大，它很稳。',
+    bg:'#e3e3f4',accent:'#6c6da2',colors:['#a7dce6','#6c8fc9','#464f8f'],eye:'#fff4cf',
+    outline:'M49 104 L33 41 Q25 20 42 15 Q60 12 62 35 L77 72 C115 19 189 24 221 78 C253 128 231 184 188 207 Q218 209 233 222 Q239 237 222 239 L56 239 Q20 238 17 205 L22 140 Q22 114 49 104Z',
+    depth:.49,bevel:.16,size:1.24,eyes:{width:.22,height:.34,gap:.42,shiftY:.08},
+    paint:[robotPaint(robotOval(.26,.20,.62,.62),'#6d659f'),robotPaint(wonderArc(.27,.25,.49,.49,.09,0,325),'#b6b4e2'),robotPaint(wonderArc(.27,.25,.29,.29,.08,30,350),'#94d9e6'),robotPaint(robotOval(-.30,-.25,.43,.45),'#8cc8d3'),robotPaint(robotStar(.50,.55,.07),'#f5e1af'),robotDot(.67,.28,.024,'#dedfff'),robotBar(-.08,-.61,.69,.06,'#c0e6da',.025)],
+  },
+  {
+    key:'vinylvoid',name:'唱片黑洞',english:'VINYL VOID / 20',tone:'宇宙唱片',tag:'墨蓝圆盘 · 同心轨道 · 橙色引力',
+    story:'一颗喜欢听老唱片的黑洞。吸进去的是噪声，吐出来的是好主意。',
+    bg:'#e3e4ed',accent:'#6b628b',colors:['#586681','#28354c','#131c34'],eye:'#ffe7a6',
+    outline:'M128 14 C192 14 242 64 242 128 C242 192 192 242 128 242 C64 242 14 192 14 128 C14 64 64 14 128 14Z',
+    depth:.31,bevel:.13,size:1.20,eyes:{width:.24,height:.34,gap:.44,shiftY:.015},
+    paint:[...[[.79,'#657084'],[.65,'#84909d'],[.51,'#5b6d87']].map(([r,c])=>robotPaint(wonderArc(0,0,r,r,.025),c,.75)),robotPaint(robotOval(0,0,.41),'#b06542'),robotPaint(robotOval(0,0,.32),'#6f3e4a'),robotPaint(wonderArc(0,0,.75,.75,.05,32,108),'#dec1aa',.7),robotPaint(wonderArc(0,0,.65,.65,.06,202,263),'#9298c8',.8)],
+  },
+  {
+    key:'jellytower',name:'弹簧果冻',english:'JELLY STACK / 21',tone:'堆叠软体',tag:'桃子粉 · 奶油夹层 · 拟态弹簧',
+    story:'把三层果冻叠成了一个小宇宙。身体可以扭，工作态度不能塌。',
+    bg:'#f4e3e9',accent:'#b96f96',colors:['#ffdbef','#e697c1','#aa6399'],eye:'#62375d',
+    outline:'M59 70 C37 59 52 24 85 22 L169 22 C206 21 224 57 198 73 C231 83 238 117 214 132 C242 149 240 177 215 187 C240 214 215 239 182 239 L69 239 C31 239 12 210 42 187 C11 175 13 147 40 132 C18 114 23 82 59 70Z',
+    depth:.52,bevel:.17,size:1.23,eyes:{width:.24,height:.40,gap:.48,shiftY:.02},
+    paint:[robotPaint(robotOval(0,.48,.63,.13),'#fff0d7'),robotPaint(robotOval(0,-.39,.74,.12),'#f8d9eb'),robotPaint(wonderArc(0,-.41,.70,.20,.04,180,360),'#bc78ad'),robotPaint(robotOval(-.37,.61,.19,.07),'#fff7fc',.85),...robotCheeks('#d875a7'),robotBar(0,-.25,.12,.035,'#a85680')],
+  },
+  {
+    key:'luckydice',name:'悬浮骰子',english:'LUCKY CUBE / 22',tone:'立体小方糖',tag:'瓷白厚块 · 草莓点数 · 好运',
+    story:'把运气装进一颗有厚度的奶白骰子。它认真思考，不会替你胡乱掷答案。',
+    bg:'#ece7e4',accent:'#9a7375',colors:['#fffdf2','#ebddd3','#b8a6a8'],eye:'#a85469',
+    outline:'M61 23 L195 23 Q233 23 233 61 L233 195 Q233 233 195 233 L61 233 Q23 233 23 195 L23 61 Q23 23 61 23Z',
+    depth:.68,bevel:.12,size:1.19,eyes:{width:.23,height:.34,gap:.47,shiftY:.04},
+    paint:[robotPanel(1.42,1.42,0,'#fff7e9',.17),robotPaint(wonderArc(0,0,.69,.69,.035,25,155),'#ffffff',.7),...[-1,1].flatMap(s=>[robotDot(s*.49,.49,.072,'#d6979f'),robotDot(s*.49,-.49,.072,'#bd7488')]),robotDot(0,-.37,.072,'#c6768a')],
+  },
+  {
+    key:'lanternpuffer',name:'灯笼河豚',english:'LANTERN PUFF / 23',tone:'海底小灯笼',tag:'柠檬金 · 圆刺 · 冷光肚皮',
+    story:'一紧张就把自己点亮的河豚。每根刺都圆钝，像一盏暖黄的小夜灯。',
+    bg:'#f0ebce',accent:'#99934d',colors:['#fff4a5','#d9ca61','#929a50'],eye:'#415a55',
+    outline:'M116 31 L128 8 L142 31 L168 37 L188 19 L194 53 L216 69 L242 65 L230 96 L237 122 L255 139 L232 151 L220 177 L231 203 L202 202 L180 221 L172 245 L149 229 L121 236 L102 253 L88 229 L61 217 L34 223 L35 195 L18 172 L1 158 L23 140 L22 111 L7 87 L38 80 L54 57 L55 28 L85 40Z',
+    depth:.57,bevel:.16,size:1.26,eyes:{width:.23,height:.34,gap:.45,shiftY:.025},
+    paint:[robotPaint(robotOval(0,-.14,.61,.65),'#eaf4b7'),robotPaint(robotOval(-.28,.40,.27,.16),'#fff9c9',.8),...[-1,1].flatMap(s=>[robotDot(s*.62,.26,.035,'#8c9b4a'),robotDot(s*.66,-.03,.035,'#8c9b4a'),robotDot(s*.53,-.46,.03,'#8c9b4a')]),robotPaint(robotOval(0,-.36,.09,.06),'#b4944c'),robotPaint(robotOval(0,-.34,.04,.025),'#fff1bd')],
+  },
+  {
+    key:'stardrop',name:'星轨水滴',english:'STAR DROP / 24',tone:'玻璃彗星',tag:'青蓝玻璃 · 偏锋彗尾 · 星屑',
+    story:'从一条星轨上掉下来的玻璃水滴。额头那点光，是它尚未用完的宇宙电量。',
+    bg:'#dcecf0',accent:'#4e94ab',colors:['#ccfff4','#65c7dd','#4967ad'],eye:'#244f77',
+    outline:'M191 8 C181 56 220 79 232 117 C257 188 210 241 140 245 C71 249 19 204 19 144 C18 102 46 77 91 62 Q145 45 191 8Z',
+    depth:.54,bevel:.19,size:1.24,eyes:{width:.22,height:.40,gap:.44,shiftY:.10},
+    paint:[wonderStripe([[.39,.83],[.19,.48],[-.19,.39],[-.48,.15],[-.37,.47],[.04,.62]],'#effff5',.8),robotPaint(wonderArc(.03,-.07,.62,.60,.07,205,345),'#548cce',.65),robotPaint(robotStar(.44,.33,.09),'#ecffce'),robotDot(.56,.13,.026,'#dafff4'),...robotCheeks('#86e0df')],
+  },
+  {
+    key:'graffitigloop',name:'吐舌涂鸦',english:'GLOOP / 25',tone:'街头怪趣',tag:'酸橙怪团 · 油漆滴 · 粉舌头',
+    story:'一滴不肯按形状待着的油漆。它的灵感会溅出来，完成事情还要调皮一下。',
+    bg:'#e9efcc',accent:'#7e963b',colors:['#edff9c','#b9d65a','#688b50'],eye:'#3d4253',
+    outline:'M39 83 C9 68 29 25 56 44 C72 7 108 17 110 48 C135 16 177 21 177 58 C214 28 242 60 217 88 C251 105 240 139 213 142 Q247 166 229 190 Q219 206 201 193 L201 223 Q201 246 180 243 Q163 239 167 213 L145 212 Q146 245 126 245 Q105 245 109 217 L88 211 Q80 238 61 230 Q44 221 56 200 C17 205 5 174 31 154 C1 136 7 102 39 83Z',
+    depth:.38,bevel:.15,size:1.25,eyes:{width:.28,height:.36,gap:.51,shiftY:-.01},
+    paint:[wonderStripe([[-.72,.24],[-.51,.39],[-.41,.23],[-.61,.12]],'#527a60'),robotPaint(robotOval(0,-.34,.28,.15),'#414155'),robotPaint(robotOval(.09,-.42,.12,.20),'#ef8faf'),robotBar(.09,-.43,.023,.16,'#bb527d'),robotDot(.48,.38,.047,'#f6ffcc'),robotDot(.61,.28,.027,'#f6ffcc'),robotDot(-.46,-.23,.045,'#8aab46')],
+  },
+  {
+    key:'cheesemoon',name:'奶酪月球',english:'CHEESE MOON / 26',tone:'荒诞小行星',tag:'奶黄月岩 · 孔洞错觉 · 月岩厚切',
+    story:'月球真的是奶酪做的吗？它不回答，只把自己的小坑洞擦得亮亮的。',
+    bg:'#f2e8cf',accent:'#ac893e',colors:['#ffed9e','#e6be58','#b38343'],eye:'#805333',
+    outline:'M31 80 L173 13 Q187 9 199 25 L239 191 Q243 208 224 215 L63 243 Q45 247 39 226 L15 105 Q10 87 31 80Z',
+    depth:.60,bevel:.055,size:1.23,eyes:{width:.24,height:.36,gap:.46,shiftY:.04},
+    paint:[wonderStripe([[-.78,.37],[.33,.86],[.68,-.53],[-.56,-.75]],'#ffe497'),...[[.28,.52,.13],[-.48,-.37,.12],[.46,-.43,.16],[-.39,.35,.07]].flatMap(([x,y,r])=>[robotPaint(robotOval(x,y,r,r*.72),'#c29145'),robotPaint(robotOval(x-.018,y-.025,r*.73,r*.46),'#edbd5c')]),robotPaint(wonderArc(0,-.26,.15,.13,.025,190,350),'#b28146')],
+  },
+  {
+    key:'foldbutterfly',name:'绯红折翼',english:'FOLDWING / 27',tone:'折面蝶灵',tag:'宝石红 · 玻璃翼 · 靛蓝中轴',
+    story:'像一枚会思考的蝴蝶结，也像两片折起的彩色玻璃。每次回头都换一组折面。',
+    bg:'#f0e0eb',accent:'#ad5b8d',colors:['#f6afd3','#c963a2','#683d87'],eye:'#fdf0c9',
+    outline:'M123 56 L65 13 Q38 5 31 37 L15 90 L52 127 L23 171 Q11 195 39 211 L77 233 L126 194 L177 236 L218 213 Q243 197 227 171 L202 130 L240 90 L221 33 Q215 8 191 15 L137 56Z',
+    depth:.28,bevel:.045,size:1.25,eyes:{width:.22,height:.32,gap:.39,shiftY:.035},
+    paint:[wonderStripe([[-.80,.62],[-.29,.41],[-.18,-.11],[-.67,.07]],'#f5c6de'),wonderStripe([[.80,.62],[.29,.41],[.18,-.11],[.67,.07]],'#cd8cc7'),wonderStripe([[-.67,-.38],[-.17,-.14],[-.39,-.74]],'#b566ae'),wonderStripe([[.67,-.38],[.17,-.14],[.39,-.74]],'#e8a5cf'),robotPanel(.77,1.10,-.02,'#573c73',.21),robotPaint(robotStar(0,-.42,.08),'#efbfba')],
+  },
+  {
+    key:'jadecactus',name:'翡翠仙人掌',english:'JADE CACTUS / 28',tone:'沙漠玉雕',tag:'翡翠釉 · 双臂 · 桃色花苞',
+    story:'一株把刺磨成玉点的仙人掌。举着双手，像随时准备说“这件事交给我”。',
+    bg:'#e0ebe1',accent:'#518b79',colors:['#b1ebbd','#61ad8e','#347466'],eye:'#204d49',
+    outline:'M85 95 L85 54 Q85 17 123 17 Q165 17 165 54 L165 138 L184 138 L184 83 Q184 60 206 60 Q232 60 232 85 L232 145 Q232 185 187 187 L165 187 L165 229 Q125 249 85 229 L85 157 L61 157 Q21 157 21 119 L21 65 Q21 42 43 42 Q66 42 66 65 L66 95Z',
+    depth:.47,bevel:.17,size:1.24,eyes:{width:.20,height:.35,gap:.33,shiftY:.06},
+    paint:[robotBar(-.23,-.02,.055,1.35,'#9ed8a9',.025),robotBar(.24,-.01,.055,1.35,'#367f70',.025),robotBar(-.65,.17,.045,.38,'#c0ecc0'),robotBar(.66,-.02,.045,.39,'#8dceaa'),...[-.17,.17].flatMap(x=>[robotDot(x,.48,.021,'#e2efd1'),robotDot(x,-.44,.021,'#e2efd1')]),robotPaint(robotOval(.08,.70,.14,.08),'#efc4bf')],
+  },
+  {
+    key:'moonshroom',name:'蘑菇占卜师',english:'MOONSHROOM / 29',tone:'夜光森林',tag:'宽檐菌帽 · 月斑 · 奶油菌柄',
+    story:'总是把帽檐压得很低的小蘑菇。帽上的星斑会告诉你，它还在努力思考。',
+    bg:'#e5e0ec',accent:'#7b648e',colors:['#d5b5e5','#9d7cbe','#584b81'],eye:'#57476a',
+    outline:'M18 131 C18 66 61 17 127 17 C194 17 238 64 238 131 Q239 152 217 156 L164 156 L176 219 Q181 243 153 243 L99 243 Q72 242 77 219 L88 156 L39 156 Q17 155 18 131Z',
+    depth:.45,bevel:.16,size:1.24,eyes:{width:.19,height:.33,gap:.33,shiftY:.17},
+    paint:[robotPaint(robotOval(0,-.33,.40,.63),'#f1e3cb'),robotPaint(robotOval(0,.48,.83,.34),'#b097cd'),robotPaint(robotOval(-.38,.54,.17,.10),'#f3e0cd'),robotPaint(robotOval(.30,.59,.12,.09),'#f3e0cd'),robotPaint(robotOval(.59,.32,.08,.055),'#dbc9e1'),robotBar(0,.12,1.51,.055,'#786190',.02),robotDot(-.22,-.45,.025,'#d69baf'),robotDot(.22,-.45,.025,'#d69baf')],
+  },
+  {
+    key:'velvetbat',name:'天鹅绒蝠',english:'VELVET BAT / 30',tone:'哥特软玩具',tag:'莓紫绒翼 · 月白小牙 · 高耳',
+    story:'看上去很酷，其实怕你熬夜。两只宽翼像一条能把烦恼裹起来的小披风。',
+    bg:'#e6e0ed',accent:'#7c5a92',colors:['#b59ac5','#755888','#403751'],eye:'#eedca2',
+    outline:'M86 85 L84 17 Q85 5 96 18 L126 56 L155 15 Q166 2 170 18 L172 86 L224 52 L247 110 L229 163 L210 146 L192 181 L174 158 L163 213 L126 242 L87 211 L78 159 L61 182 L43 147 L25 164 L7 109 L30 52Z',
+    depth:.39,bevel:.10,size:1.25,eyes:{width:.23,height:.31,gap:.40,shiftY:.035},
+    paint:[wonderStripe([[-.31,.81],[-.30,.40],[-.11,.35]],'#d29bb7'),wonderStripe([[.34,.81],[.31,.40],[.12,.35]],'#d29bb7'),wonderStripe([[-.84,.37],[-.46,.09],[-.58,-.35]],'#9676ad'),wonderStripe([[.84,.37],[.46,.09],[.58,-.35]],'#5d4b78'),robotPaint(robotOval(0,-.23,.37,.38),'#64495f'),wonderStripe([[-.18,-.28],[-.06,-.28],[-.11,-.45]],'#f6e5c6'),wonderStripe([[.18,-.28],[.06,-.28],[.11,-.45]],'#f6e5c6')],
+  },
+  {
+    key:'chromaknot',name:'彩虹拓扑',english:'CHROMA KNOT / 31',tone:'抽象软雕塑',tag:'三叶体 · 交叠色带 · 不可能结',
+    story:'一个试图把自己解开的彩色结。看起来有点不可能，却每次都能稳稳回到原位。',
+    bg:'#e6e5ee',accent:'#7877ad',colors:['#c6d8ff','#a0a6de','#77649e'],eye:'#423b69',
+    outline:'M78 92 C36 62 63 10 109 12 C153 3 179 37 167 79 C215 53 252 88 244 133 C240 174 209 193 172 184 C181 227 145 253 105 243 C62 240 42 209 56 174 C9 180 2 143 17 118 C29 99 53 96 78 92Z',
+    depth:.56,bevel:.20,size:1.26,eyes:{width:.23,height:.34,gap:.45,shiftY:.015},
+    paint:[robotPaint(wonderArc(-.08,.30,.47,.43,.20,15,285),'#f1b7c9'),robotPaint(wonderArc(.28,-.05,.47,.43,.20,165,440),'#98e1d3'),robotPaint(wonderArc(-.16,-.28,.47,.43,.20,180,445),'#e9d79e'),robotPaint(robotOval(0,-.015,.37,.33),'#d3c9e9'),robotPaint(wonderArc(-.08,.30,.47,.43,.045,30,135),'#fff3e7',.8),robotPaint(robotStar(0,-.47,.075),'#f9eac4')],
+  },
+];
+robotCatalog.push(...wonderCatalog);
+robotRegisterDesigns(wonderCatalog);

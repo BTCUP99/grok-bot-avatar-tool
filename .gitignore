@@ -1,0 +1,18 @@
+.DS_Store
+*.zip
+**/config.local.json
+**/evidence/
+# Do not reintroduce vendor extracts or obsolete experiments into version control.
+/native-bean/
+/research/
+/bean-avatar-loop/
+/runtime-node/
+/releases/
+
+# Download manifests are generated for release archives, not source commits.
+/SHA256SUMS.txt
+node_modules/
+.env
+.env.*
+*.pem
+*.key

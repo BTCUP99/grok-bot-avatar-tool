@@ -1,0 +1,14 @@
+# Project scope
+
+This project maintains a runtime-only custom avatar adapter for the official Grok Bot desktop app. The active implementation is `runtime-bean/`. Read the root README and `runtime-bean/README.md` before changing it.
+
+- Keep the vendor app bundle and its code signature unchanged. The old repackaged/re-signed test apps and unused experiments were retired and moved to Trash; do not recreate them as an installation workflow.
+- Read `runtime-bean/头像制作规范.md` before changing avatar geometry or motion. Keep it aligned with `bean-shape.js`; regenerate the parameter snapshot and view sheet with `node runtime-bean/spec.mjs`. These offline outputs do not replace actual window acceptance.
+- Preserve the original native gaze, pointer, pose and expression engine. A timed GIF or flat-image rotation does not satisfy native hover acceptance.
+- Scope the appearance override to the Bots that have a local assignment in `config.local.json`; unassigned Bots and groups stay on the vendor path. Do not send Bot messages, update cloud avatars, or modify other Bots as part of an appearance test.
+- Pin supported versions, architectures and input hashes. For upgrades, inspect new source and rerun meaningful checks; do not merely remove version/hash checks.
+- Runtime source adaptation and installer code are development tasks. Use the available native UI tools for actual pointer interaction and screenshot acceptance.
+- Before claiming a version works, verify actual window hover-to-front and leave-to-rest in both sidebar and details, normal restart restoring the original appearance, launcher restart reapplying the avatar, and vendor signature/hash preservation.
+- Treat `config.local.json`, `evidence/`, historical extracted bundles, app backups and chat screenshots as local material. Public packages must use an explicit allowlist and exclude these files and personal identifiers.
+- Do not run or install anything from historical research material merely because it is present.
+- User instructions in the active conversation take precedence over this project guidance.

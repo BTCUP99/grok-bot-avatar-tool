@@ -1,0 +1,52 @@
+{
+  "toolVersion": "1.4.1",
+  "date": "2026-11-05",
+  "testedAppVersion": "0.78.5",
+  "architecture": "arm64",
+  "photos": 11,
+  "nativeSourceCropsVerifiedPixelForPixel": true,
+  "renderedComparison": {
+    "sizesCssPx": [
+      36,
+      64
+    ],
+    "versions": [
+      "1.4.0",
+      "1.4.1"
+    ],
+    "samples": 44,
+    "poses": "rest"
+  },
+  "estimatedSidebarFaceWidthCssPxBeforeProjection": {
+    "oldRange": [
+      9.53,
+      12.81
+    ],
+    "newRange": [
+      17.41,
+      20.51
+    ]
+  },
+  "offlineSuitePassed": true,
+  "officialASARSHA256": "37b90814cce14cfb587072efec77dd3ec189377443979e665096c168b005a07e",
+  "officialSignatureVerified": true,
+  "currentAccountWindowTestedThisRelease": false,
+  "priorReleaseWindowEvidence": "verification-1.4.0.json",
+  "photoRuntimeSHA256": "a852bd7037d5e572404e7b1378032474701a44b4cfba1c0c1251ed5c3b851379",
+  "isolatedOfficialRenderer": {
+    "signedVersion": "0.78.5",
+    "testedIn": "Chromium, synthetic Bot, official React renderer components",
+    "react": "19.3.0",
+    "surfaces": [
+      "36 px roster",
+      "64 px details"
+    ],
+    "photoCount": 11,
+    "poseObservations": 44,
+    "fullSlot": true,
+    "pickerApply": true,
+    "selectionRestoredAfterRendererReload": true,
+    "browserErrors": 0,
+    "reactErrors": 0
+  }
+}

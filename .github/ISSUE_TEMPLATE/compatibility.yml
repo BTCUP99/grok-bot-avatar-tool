@@ -1,0 +1,41 @@
+name: 兼容性与使用问题
+description: 客户端升级后不能加载、启动失败，或头像交互异常
+title: '[兼容性] '
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请提供版本和可复现步骤。不要贴出密钥、config.local.json、Bot ID、聊天记录或未经清理的调试日志。
+  - type: input
+    id: tool-version
+    attributes:
+      label: 头像工具版本
+      description: 例如 1.4.3；下载包名或 package.json 中可查看。
+    validations:
+      required: true
+  - type: input
+    id: app-version
+    attributes:
+      label: Grok Bot 客户端版本
+      description: 从客户端的版本信息中查看。
+    validations:
+      required: true
+  - type: input
+    id: system
+    attributes:
+      label: macOS 版本与芯片
+      description: 例如 macOS 15、Apple M3。
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 如何复现，以及实际结果
+      description: 从哪个启动入口打开、进行了什么操作、期望出现什么。
+    validations:
+      required: true
+  - type: textarea
+    id: error
+    attributes:
+      label: 已清理个人信息的报错
+      description: 只粘贴与问题相关的报错文字；截图需先遮住聊天内容和个人资料。

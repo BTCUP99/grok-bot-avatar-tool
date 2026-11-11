@@ -1,0 +1,239 @@
+{
+  "toolVersion": "1.4.0",
+  "date": "2026-11-05",
+  "appVersion": "0.78.4",
+  "platform": "macOS arm64",
+  "scope": "Whole-photo motion; native UI pointer actions with read-only DOM observations. Private screenshots and Bot identifiers excluded.",
+  "photoCount": 11,
+  "realPointerPoseObservations": 44,
+  "characters": [
+    {
+      "name": "香氛街区",
+      "key": "fragrance",
+      "checks": [
+        {
+          "size": 36,
+          "front": "front",
+          "rest": "rest",
+          "imageHash": "aed86fb723949959fdb54aa852ec15685fe153dc733a4a321f7225981a58fd69"
+        },
+        {
+          "size": 64,
+          "front": "front",
+          "rest": "rest",
+          "imageHash": "aed86fb723949959fdb54aa852ec15685fe153dc733a4a321f7225981a58fd69"
+        }
+      ]
+    },
+    {
+      "name": "江南贵女",
+      "key": "lotus",
+      "checks": [
+        {
+          "size": 36,
+          "front": "front",
+          "rest": "rest",
+          "imageHash": "57492ac3b90845497ee25830d0ea09c51e01e68d6ca9b4a0e0f6083256e8f509"
+        },
+        {
+          "size": 64,
+          "front": "front",
+          "rest": "rest",
+          "imageHash": "57492ac3b90845497ee25830d0ea09c51e01e68d6ca9b4a0e0f6083256e8f509"
+        }
+      ]
+    },
+    {
+      "name": "设计周广场",
+      "key": "designweek",
+      "checks": [
+        {
+          "size": 36,
+          "front": "front",
+          "rest": "rest",
+          "imageHash": "1f8fec877123c0e665d09e58b14396c3e67d212d396084db2c2bdd4ee4b6de9b"
+        },
+        {
+          "size": 64,
+          "front": "front",
+          "rest": "rest",
+          "imageHash": "1f8fec877123c0e665d09e58b14396c3e67d212d396084db2c2bdd4ee4b6de9b"
+        }
+      ]
+    },
+    {
+      "name": "地铁广场",
+      "key": "metro",
+      "checks": [
+        {
+          "size": 36,
+          "front": "front",
+          "rest": "rest",
+          "imageHash": "a2613973a2ae8c93373b522c480168c1c0b3bc1ef1c73d3588c5dd5648407f01"
+        },
+        {
+          "size": 64,
+          "front": "front",
+          "rest": "rest",
+          "imageHash": "a2613973a2ae8c93373b522c480168c1c0b3bc1ef1c73d3588c5dd5648407f01"
+        }
+      ]
+    },
+    {
+      "name": "空中连廊",
+      "key": "skywalk",
+      "checks": [
+        {
+          "size": 36,
+          "front": "front",
+          "rest": "rest",
+          "imageHash": "72a7a08ad8bc99e2470cde7de003ebbb6ade851c695a4a2986e5fb46d2b68f5a"
+        },
+        {
+          "size": 64,
+          "front": "front",
+          "rest": "rest",
+          "imageHash": "72a7a08ad8bc99e2470cde7de003ebbb6ade851c695a4a2986e5fb46d2b68f5a"
+        }
+      ]
+    },
+    {
+      "name": "公园日常",
+      "key": "park",
+      "checks": [
+        {
+          "size": 36,
+          "front": "front",
+          "rest": "rest",
+          "imageHash": "1eaa7dcb2a1f28282d395880ba708083379d847ee4b0d7e66d02eda64faaeaa1"
+        },
+        {
+          "size": 64,
+          "front": "front",
+          "rest": "rest",
+          "imageHash": "1eaa7dcb2a1f28282d395880ba708083379d847ee4b0d7e66d02eda64faaeaa1"
+        }
+      ]
+    },
+    {
+      "name": "城市夜色",
+      "key": "citynight",
+      "checks": [
+        {
+          "size": 36,
+          "front": "front",
+          "rest": "rest",
+          "imageHash": "6dcaf392b0a62bb86252460d14699dc660b7d10dbcd91d85105fe3e878f8da4a"
+        },
+        {
+          "size": 64,
+          "front": "front",
+          "rest": "rest",
+          "imageHash": "6dcaf392b0a62bb86252460d14699dc660b7d10dbcd91d85105fe3e878f8da4a"
+        }
+      ]
+    },
+    {
+      "name": "山野花田",
+      "key": "flowerfield",
+      "checks": [
+        {
+          "size": 36,
+          "front": "front",
+          "rest": "rest",
+          "imageHash": "8d7f8fbc67492c52cfa03175a656f909ecef77c4b4288aea337ff9f5e31d91b3"
+        },
+        {
+          "size": 64,
+          "front": "front",
+          "rest": "rest",
+          "imageHash": "8d7f8fbc67492c52cfa03175a656f909ecef77c4b4288aea337ff9f5e31d91b3"
+        }
+      ]
+    },
+    {
+      "name": "海滩晴蓝",
+      "key": "sunnybeach",
+      "checks": [
+        {
+          "size": 36,
+          "front": "front",
+          "rest": "rest",
+          "imageHash": "6f0f5c7646fe0e6ce0a523fe780ddc2ab38ffe10e3ec7c8d62013a62871638dc"
+        },
+        {
+          "size": 64,
+          "front": "front",
+          "rest": "rest",
+          "imageHash": "6f0f5c7646fe0e6ce0a523fe780ddc2ab38ffe10e3ec7c8d62013a62871638dc"
+        }
+      ]
+    },
+    {
+      "name": "海风白裙",
+      "key": "seabreeze",
+      "checks": [
+        {
+          "size": 36,
+          "front": "front",
+          "rest": "rest",
+          "imageHash": "0659472cec4ee30ba752ead091b845466236c93751cf77fea87edee72686b0f8"
+        },
+        {
+          "size": 64,
+          "front": "front",
+          "rest": "rest",
+          "imageHash": "0659472cec4ee30ba752ead091b845466236c93751cf77fea87edee72686b0f8"
+        }
+      ]
+    },
+    {
+      "name": "湖畔咖啡",
+      "key": "lakecafe",
+      "checks": [
+        {
+          "size": 36,
+          "front": "front",
+          "rest": "rest",
+          "imageHash": "bd3bc708a63d9c8b00a2a375913472cb9f05ae2a786b79ee06e9be3897d3e89b"
+        },
+        {
+          "size": 64,
+          "front": "front",
+          "rest": "rest",
+          "imageHash": "bd3bc708a63d9c8b00a2a375913472cb9f05ae2a786b79ee06e9be3897d3e89b"
+        }
+      ]
+    }
+  ],
+  "states": {
+    "localDemo": [
+      "photo_fragrance",
+      "photo_lakecafe"
+    ],
+    "workingLight": true,
+    "completionBounce": true,
+    "realTaskEndToEnd": false
+  },
+  "otherBotPickerHas11Photos": true,
+  "otherBotSelectionCancelled": true,
+  "restoreOriginal": true,
+  "nativeRepresentative": {
+    "shape": "robot_bitboy",
+    "sidebarFrontRest": true,
+    "detailsFrontRest": true
+  },
+  "version": "0.78.4",
+  "officialHash": "cb4d43f733076d4c441907cd427691bcebab6ada2f03d913991d04bf5ae59d93",
+  "officialSignatureVerified": true,
+  "normalRestartOriginalAppearanceVerified": true,
+  "normalRestartDebugPortClosed": true,
+  "launcherRestartSelectionRestored": true,
+  "sourceSHA256": {
+    "photo-runtime.js": "87d859deeb1060baa23a38308f28415b332c8ecca13cf14b51e932f372a1e6bb",
+    "library-bridge.js": "d30b20a205e2ddea428a9e4af94e8cadb73522a666f50340b1ba727ddcc92e22",
+    "library-picker.js": "cc2fd8815bf4adbbe09bedb79ff8dd2bda8b0c97ac18e45bccec57a4c7ba67a1",
+    "patch.mjs": "a95508d922a632f23837ce9037316fe72a48a8473b09c57ded2299472b97bd5b",
+    "avatar-catalog.mjs": "17d73402b1c90f9a80968f6370aca7f9f40b87b6c22c48864f26e8f0391bc0fb"
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "appVersion": "0.79.4",
+  "officialAsarSHA256": "4f1c458f85448a5e307c2330b92cb8d17f1f75ddc470fbb67a53815700339ffe",
+  "avatarSourceSHA256": "3790da744c01c06a22b9fde0b56842f28789f6fa1ebad8e9b68fad31ff2b9d3d",
+  "scope": "offline native-engine measurements; actual window hover evidence is separate",
+  "shape": "milkcat",
+  "geometry": {
+    "size": 1.22,
+    "kind": "extrusion",
+    "ballCount": 0,
+    "seat": "front"
+  },
+  "eyeLayout": {
+    "width": 0.24,
+    "height": 0.41,
+    "gap": 0.49,
+    "shiftY": 0.08
+  },
+  "observedAppDisplayCssPx": {
+    "sidebar": 36,
+    "profile": 64
+  },
+  "sharedSourceResolution": 192,
+  "views": [
+    {
+      "key": "rest",
+      "gaze": null,
+      "quaternionWXYZ": [
+        0.9169956148992757,
+        -0.19158116627165409,
+        0.2476740623943209,
+        0.2471300422906653
+      ],
+      "degrees": {
+        "pitch": -15.896271043294888,
+        "yaw": 33.29315635042974,
+        "roll": 25.38480127460161
+      },
+      "zoom": 0.6,
+      "offset": [
+        0,
+        0
+      ]
+    },
+    {
+      "key": "front",
+      "gaze": [
+        0,
+        0
+      ],
+      "quaternionWXYZ": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "zoom": 0.6,
+      "offset": [
+        0,
+        0
+      ]
+    },
+    {
+      "key": "left",
+      "gaze": [
+        -1,
+        0
+      ],
+      "quaternionWXYZ": [
+        0.9743700647852352,
+        0,
+        -0.224951054343865,
+        0
+      ],
+      "degrees": {
+        "pitch": 0,
+        "yaw": -26.000000000000007,
+        "roll": 0
+      },
+      "zoom": 0.6,
+      "offset": [
+        -0.07,
+        0
+      ]
+    },
+    {
+      "key": "right",
+      "gaze": [
+        1,
+        0
+      ],
+      "quaternionWXYZ": [
+        0.9743700647852352,
+        0,
+        0.224951054343865,
+        0
+      ],
+      "degrees": {
+        "pitch": 0,
+        "yaw": 26.000000000000007,
+        "roll": 0
+      },
+      "zoom": 0.6,
+      "offset": [
+        0.07,
+        0
+      ]
+    },
+    {
+      "key": "up",
+      "gaze": [
+        0,
+        1
+      ],
+      "quaternionWXYZ": [
+        0.9862856015372314,
+        -0.16504760586067765,
+        0,
+        0
+      ],
+      "degrees": {
+        "pitch": -19,
+        "yaw": 0,
+        "roll": 0
+      },
+      "zoom": 0.6,
+      "offset": [
+        0,
+        0.055
+      ]
+    },
+    {
+      "key": "down",
+      "gaze": [
+        0,
+        -1
+      ],
+      "quaternionWXYZ": [
+        0.9862856015372314,
+        0.16504760586067765,
+        0,
+        0
+      ],
+      "degrees": {
+        "pitch": 19,
+        "yaw": 0,
+        "roll": 0
+      },
+      "zoom": 0.6,
+      "offset": [
+        0,
+        -0.055
+      ]
+    }
+  ]
+}

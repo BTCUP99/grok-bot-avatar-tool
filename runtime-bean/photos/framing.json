@@ -1,0 +1,205 @@
+{
+  "toolVersion": "1.4.1",
+  "cropCoordinates": "Original oriented image, pixels from top left, [x,y,width,height]",
+  "faceWidthFraction": "Estimated using the same detected face rectangle at both framings",
+  "portraits": [
+    {
+      "key": "fragrance",
+      "name": "香氛街区",
+      "sourceSize": [
+        940,
+        1672
+      ],
+      "sourceSHA256": "c789c36ea9c55aab85fb4c92874383a863f80d5bde615e8989b9434c809019d7",
+      "sourceCropXYWH": [
+        357,
+        130,
+        410,
+        410
+      ],
+      "faceWidthFraction": 0.5532,
+      "previousFaceWidthFraction": 0.3544,
+      "pngSHA256": "11e0c40540bfb9595366c973924a63a8bf360cae8143098de18243e97a3b2c0f"
+    },
+    {
+      "key": "lotus",
+      "name": "江南贵女",
+      "sourceSize": [
+        941,
+        1672
+      ],
+      "sourceSHA256": "7a9fd72bf053f66e867543d1f52163cce47aa26d805f2927dcb53312908cc2eb",
+      "sourceCropXYWH": [
+        115,
+        16,
+        735,
+        735
+      ],
+      "faceWidthFraction": 0.4837,
+      "previousFaceWidthFraction": 0.3864,
+      "pngSHA256": "a2b5d0e44158edc5f7d70ce5df69407466f982acda37d2c8b68a2cc9ff2bfa17"
+    },
+    {
+      "key": "designweek",
+      "name": "设计周广场",
+      "sourceSize": [
+        941,
+        1672
+      ],
+      "sourceSHA256": "f5a0bf6bc65df9f389404cc4ad951487f56fdedf9f916879d4566787def17e72",
+      "sourceCropXYWH": [
+        334,
+        175,
+        400,
+        400
+      ],
+      "faceWidthFraction": 0.5435,
+      "previousFaceWidthFraction": 0.3397,
+      "pngSHA256": "4a36528fdbb1d4af3c0c7eddd5b06cffb989a120ff245fcffdff5830ad9174b1"
+    },
+    {
+      "key": "metro",
+      "name": "地铁广场",
+      "sourceSize": [
+        941,
+        1672
+      ],
+      "sourceSHA256": "bbe490781725e1901a21a52a00bdce66b4f49d61e61f3112cde82d1f46c878e9",
+      "sourceCropXYWH": [
+        360,
+        173,
+        410,
+        410
+      ],
+      "faceWidthFraction": 0.5228,
+      "previousFaceWidthFraction": 0.3062,
+      "pngSHA256": "ad830cac7b4c1c27a8f2d856fbab4cb42859bfeab42298f6471a82cac043e62d"
+    },
+    {
+      "key": "skywalk",
+      "name": "空中连廊",
+      "sourceSize": [
+        941,
+        1672
+      ],
+      "sourceSHA256": "95cae01eedb82db1f5bacdc84da3a070976e8418f2351648804232a3ec42e38e",
+      "sourceCropXYWH": [
+        248,
+        87,
+        395,
+        395
+      ],
+      "faceWidthFraction": 0.5698,
+      "previousFaceWidthFraction": 0.3359,
+      "pngSHA256": "b438795eec068833f5144bc166e21937ea618b14e684eed36654db03d6f454fb"
+    },
+    {
+      "key": "park",
+      "name": "公园日常",
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "sourceSHA256": "f6bc855eb4e4c97b8aa83cc5317c9352e2811a2c4aa0e9ba5fd1e33266da2d83",
+      "sourceCropXYWH": [
+        206,
+        0,
+        620,
+        620
+      ],
+      "faceWidthFraction": 0.5643,
+      "previousFaceWidthFraction": 0.4116,
+      "pngSHA256": "8b1d11f9934c7fdf84cff2adc8a4e4a10f8a69457fc834d531080fae07816514"
+    },
+    {
+      "key": "citynight",
+      "name": "城市夜色",
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "sourceSHA256": "4a0b59b1e383cff35ce5ff8b23b08d5724004161f97cda55930b399eed96b789",
+      "sourceCropXYWH": [
+        298,
+        30,
+        546,
+        546
+      ],
+      "faceWidthFraction": 0.5547,
+      "previousFaceWidthFraction": 0.3786,
+      "pngSHA256": "2b83c48257bf5ad0b88eaa62f39c5eca2b0d5b548edc764a3a7ee8451447e4c5"
+    },
+    {
+      "key": "flowerfield",
+      "name": "山野花田",
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "sourceSHA256": "8dc576f8e059bdc497b5c4f0e7b21ffba198bee6a2fe534fe25aab1606de94a0",
+      "sourceCropXYWH": [
+        242,
+        39,
+        585,
+        585
+      ],
+      "faceWidthFraction": 0.5615,
+      "previousFaceWidthFraction": 0.4106,
+      "pngSHA256": "95aafa8163959300fb6cd4f40544ad1810190d4a23e0aeaaa240fee7e0f6e13b"
+    },
+    {
+      "key": "sunnybeach",
+      "name": "海滩晴蓝",
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "sourceSHA256": "507e777ad76e050c95ae314e5471755e4d90667322884e314da8d3e3f8d61d1a",
+      "sourceCropXYWH": [
+        296,
+        0,
+        395,
+        395
+      ],
+      "faceWidthFraction": 0.5456,
+      "previousFaceWidthFraction": 0.3476,
+      "pngSHA256": "88475a9716298ef76a1059967c65a4f56301515daf98ffaa1385e5685b250333"
+    },
+    {
+      "key": "seabreeze",
+      "name": "海风白裙",
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "sourceSHA256": "5e52cb87cca6e2bdd85163f0fdc84931c7c7a01aa85060bdd9adc08511c247e0",
+      "sourceCropXYWH": [
+        255,
+        26,
+        550,
+        550
+      ],
+      "faceWidthFraction": 0.5478,
+      "previousFaceWidthFraction": 0.3674,
+      "pngSHA256": "2b1239e18a32c939a4eeb0fcedb98fef971bdd95574bc01dc04af5dc78741835"
+    },
+    {
+      "key": "lakecafe",
+      "name": "湖畔咖啡",
+      "sourceSize": [
+        1024,
+        1536
+      ],
+      "sourceSHA256": "f7c882cedce91fb7fda407214625e65696238ab56373c8deaec6927de385e70c",
+      "sourceCropXYWH": [
+        90,
+        135,
+        565,
+        565
+      ],
+      "faceWidthFraction": 0.5494,
+      "previousFaceWidthFraction": 0.388,
+      "pngSHA256": "de2b5a2009ea054e6fd777eacc6ec10da0b196e8f5d322203bf93cb085162501"
+    }
+  ]
+}

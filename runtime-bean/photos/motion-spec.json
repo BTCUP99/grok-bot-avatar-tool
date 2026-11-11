@@ -1,0 +1,98 @@
+{
+  "version": 2,
+  "kind": "whole-photo-card",
+  "photos": 11,
+  "imagePixels": 256,
+  "displaySizesCssPx": [
+    36,
+    64
+  ],
+  "imageTransformOnly": true,
+  "facialEdits": false,
+  "restDegrees": {
+    "x": 6,
+    "y": -10,
+    "z": -6
+  },
+  "restScale": 1,
+  "frontDegrees": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "frontScale": 1,
+  "pointerMaxDegrees": {
+    "x": 6,
+    "y": 6,
+    "z": 0
+  },
+  "settleMs": 420,
+  "workLightPeriodMs": 1600,
+  "completeMs": 640,
+  "completeTranslationPercent": {
+    "up": -4,
+    "down": 1
+  },
+  "completeScaleMax": 1.015,
+  "reducedMotion": "Static upright photo, steady activity light",
+  "photoRuntimeSHA256": "a852bd7037d5e572404e7b1378032474701a44b4cfba1c0c1251ed5c3b851379",
+  "assets": [
+    {
+      "key": "photo_fragrance",
+      "file": "fragrance.png",
+      "sha256": "11e0c40540bfb9595366c973924a63a8bf360cae8143098de18243e97a3b2c0f"
+    },
+    {
+      "key": "photo_lotus",
+      "file": "lotus.png",
+      "sha256": "a2b5d0e44158edc5f7d70ce5df69407466f982acda37d2c8b68a2cc9ff2bfa17"
+    },
+    {
+      "key": "photo_designweek",
+      "file": "designweek.png",
+      "sha256": "4a36528fdbb1d4af3c0c7eddd5b06cffb989a120ff245fcffdff5830ad9174b1"
+    },
+    {
+      "key": "photo_metro",
+      "file": "metro.png",
+      "sha256": "ad830cac7b4c1c27a8f2d856fbab4cb42859bfeab42298f6471a82cac043e62d"
+    },
+    {
+      "key": "photo_skywalk",
+      "file": "skywalk.png",
+      "sha256": "b438795eec068833f5144bc166e21937ea618b14e684eed36654db03d6f454fb"
+    },
+    {
+      "key": "photo_park",
+      "file": "park.png",
+      "sha256": "8b1d11f9934c7fdf84cff2adc8a4e4a10f8a69457fc834d531080fae07816514"
+    },
+    {
+      "key": "photo_citynight",
+      "file": "citynight.png",
+      "sha256": "2b83c48257bf5ad0b88eaa62f39c5eca2b0d5b548edc764a3a7ee8451447e4c5"
+    },
+    {
+      "key": "photo_flowerfield",
+      "file": "flowerfield.png",
+      "sha256": "95aafa8163959300fb6cd4f40544ad1810190d4a23e0aeaaa240fee7e0f6e13b"
+    },
+    {
+      "key": "photo_sunnybeach",
+      "file": "sunnybeach.png",
+      "sha256": "88475a9716298ef76a1059967c65a4f56301515daf98ffaa1385e5685b250333"
+    },
+    {
+      "key": "photo_seabreeze",
+      "file": "seabreeze.png",
+      "sha256": "2b1239e18a32c939a4eeb0fcedb98fef971bdd95574bc01dc04af5dc78741835"
+    },
+    {
+      "key": "photo_lakecafe",
+      "file": "lakecafe.png",
+      "sha256": "de2b5a2009ea054e6fd777eacc6ec10da0b196e8f5d322203bf93cb085162501"
+    }
+  ],
+  "insetPercent": 0,
+  "cornerRadiusPercent": 22
+}

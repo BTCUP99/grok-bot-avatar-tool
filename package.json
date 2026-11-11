@@ -1,0 +1,27 @@
+{
+  "name": "grok-bot-avatar-tool",
+  "version": "1.4.3",
+  "description": "Thirty-one native avatars and eleven interactive portrait avatars, independently selectable per Bot.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node runtime-bean/tool.mjs",
+    "configure": "node runtime-bean/tool.mjs --configure",
+    "test": "node runtime-bean/verify-tool.mjs && node runtime-bean/verify-photos.mjs && node runtime-bean/verify-library.mjs && node runtime-bean/verify.mjs && node runtime-bean/verify-neon.mjs",
+    "prepare:runtime": "node runtime-bean/prepare-runtime.mjs",
+    "package": "node runtime-bean/package-library.mjs",
+    "test:portable": "node runtime-bean/verify-public.mjs",
+    "test:package": "node runtime-bean/verify-package.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BTCUP99/grok-bot-avatar-tool.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BTCUP99/grok-bot-avatar-tool/issues"
+  },
+  "homepage": "https://github.com/BTCUP99/grok-bot-avatar-tool#readme"
+}

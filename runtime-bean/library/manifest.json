@@ -1,0 +1,1549 @@
+{
+  "formatVersion": 1,
+  "appVersion": "0.78.4",
+  "architecture": "arm64",
+  "officialAsarSHA256": "cb4d43f733076d4c441907cd427691bcebab6ada2f03d913991d04bf5ae59d93",
+  "scope": "Original character definitions and derived art; acceptance scope is documented separately",
+  "editorContract": {
+    "file": "chunk-agent-avatar-editor-B2lwHJry.js",
+    "sha256": "77961cbc6e9e8a7c1d0195b464f515cf84817686245d4cccc994f05c8e958222"
+  },
+  "sourceSHA256": {
+    "../avatar-designs/catalog-shapes.js": "3186ca9ce6ef8610b7c63802ef25ca2daf948a490fadd00c45f7fa620fd561b2",
+    "../avatar-designs/fantasy-shapes.js": "1420f4b668573d40e1944047764beaa4d0afbd0d138010783f5834ebca19470d",
+    "library.mjs": "af02ad7fef53ef89ff693d305af1e76f5ad980f42ff7bdf3fb7e097e66ace342",
+    "library-runtime.js": "03bd56865384743dfb0ab8aef0a30302e71f9375bc28496142b72a938201350a",
+    "library-state.mjs": "d068fa2ff6091b45db5caaddbb23736ffd134f40e08813c298331506a9120874",
+    "library-bridge.js": "93b0b6cebd1043064b3adb7aabb7980c903328d70cffea6f6cd31b424b0a165c",
+    "library-picker.js": "f72dfcac06aca285162173140e05d78450c5ceba2cbfc31cd3b7ff65bec4d375",
+    "tool.mjs": "3792191c98bcb6dfd419af22878e1f523189050fc8f44f98239532f44c688056",
+    "setup-server.mjs": "31882e4bf078b3a5adc59435366fb7f33fa0ef314f39dc7de5aeb97daa62f1f8",
+    "audit.js": "e2753252e6b8ba9fbbb70a5d3c23815c567e96d75b9c2931a401b6013b009fb5",
+    "milkcat-shape.js": "3790da744c01c06a22b9fde0b56842f28789f6fa1ebad8e9b68fad31ff2b9d3d",
+    "neon-shape.js": "3451e87c07e93dedae43e1a1e8d3d0141ae1d52dd976d63a723ed22508dee98f",
+    "neon-state.mjs": "ed526a881b5e5fc20b8cda61b08ae6758d43690ad09d983ff447f04dd5c1b6c4",
+    "patch.mjs": "00a80eba6dbb742d15d28492917133e083d5ee96853dd5e7793a256451c6716d"
+  },
+  "characterCount": 31,
+  "characters": [
+    {
+      "shape": "robot_milkcat",
+      "name": "奶糖喵机",
+      "key": "milkcat",
+      "number": "01",
+      "light": "dot",
+      "position": [
+        0,
+        0.53
+      ],
+      "color": "#f5a1bb",
+      "glow": false,
+      "collection": "classic",
+      "story": "一只把机械零件藏进奶糖里的猫。高低耳朵和柔软护目窗，让它像随时准备蹭你一下。",
+      "tag": "奶油陶瓷 · 猫耳 · 草莓面颊",
+      "geometry": {
+        "size": 1.22,
+        "kind": "extrusion",
+        "depth": 0.29,
+        "bevel": 0.14
+      },
+      "eyeLayout": {
+        "width": 0.24,
+        "height": 0.41,
+        "gap": 0.49,
+        "shiftY": 0.08
+      },
+      "colors": [
+        "#fffdf1",
+        "#f6dfca",
+        "#d7ac9e"
+      ],
+      "eyeColor": "#fff4db",
+      "workingPeriodSeconds": 1.3,
+      "completion": {
+        "expression": "happy",
+        "gesture": "nod",
+        "deduplicate": "per native engine and completion key"
+      },
+      "definition": "characters/01-milkcat.json",
+      "icons": [
+        "icons/01-milkcat-rest.svg",
+        "icons/01-milkcat-front.svg",
+        "icons/01-milkcat-working.svg",
+        "icons/01-milkcat-finished.svg"
+      ],
+      "sheet": "sheets/01-milkcat.svg",
+      "parameterSnapshot": "specs/奶糖喵机参数快照.json"
+    },
+    {
+      "shape": "robot_titan",
+      "name": "钛坦大力士",
+      "key": "titan",
+      "number": "02",
+      "light": "bars",
+      "position": [
+        0.43,
+        0.56
+      ],
+      "color": "#ffce54",
+      "glow": false,
+      "collection": "classic",
+      "story": "可靠到能替你扛下一整座服务器。宽颚、铆钉和低矮的眼睛，把力量压进一个小图标。",
+      "tag": "钛灰装甲 · 宽颚 · 工业黄",
+      "geometry": {
+        "size": 1.19,
+        "kind": "extrusion",
+        "depth": 0.43,
+        "bevel": 0.12
+      },
+      "eyeLayout": {
+        "width": 0.29,
+        "height": 0.23,
+        "gap": 0.58,
+        "shiftY": 0.02
+      },
+      "colors": [
+        "#9cabb4",
+        "#586b7b",
+        "#263c51"
+      ],
+      "eyeColor": "#fff19a",
+      "workingPeriodSeconds": 1.3,
+      "completion": {
+        "expression": "happy",
+        "gesture": "nod",
+        "deduplicate": "per native engine and completion key"
+      },
+      "definition": "characters/02-titan.json",
+      "icons": [
+        "icons/02-titan-rest.svg",
+        "icons/02-titan-front.svg",
+        "icons/02-titan-working.svg",
+        "icons/02-titan-finished.svg"
+      ],
+      "sheet": "sheets/02-titan.svg",
+      "parameterSnapshot": "specs/钛坦大力士参数快照.json"
+    },
+    {
+      "shape": "robot_bitboy",
+      "name": "像素小子",
+      "key": "bitboy",
+      "number": "03",
+      "light": "battery",
+      "position": [
+        -0.37,
+        0.61
+      ],
+      "color": "#dfffad",
+      "glow": true,
+      "collection": "classic",
+      "story": "从九十年代的掌机里溜出来的小家伙。棱角分明，却总带着一点傻乎乎的乐观。",
+      "tag": "掌机绿 · 阶梯轮廓 · 电量灯",
+      "geometry": {
+        "size": 1.22,
+        "kind": "extrusion",
+        "depth": 0.3,
+        "bevel": 0.035
+      },
+      "eyeLayout": {
+        "width": 0.24,
+        "height": 0.34,
+        "gap": 0.52,
+        "shiftY": 0.05
+      },
+      "colors": [
+        "#dded9a",
+        "#a6c871",
+        "#688d4a"
+      ],
+      "eyeColor": "#dfffad",
+      "workingPeriodSeconds": 1.3,
+      "completion": {
+        "expression": "happy",
+        "gesture": "nod",
+        "deduplicate": "per native engine and completion key"
+      },
+      "definition": "characters/03-bitboy.json",
+      "icons": [
+        "icons/03-bitboy-rest.svg",
+        "icons/03-bitboy-front.svg",
+        "icons/03-bitboy-working.svg",
+        "icons/03-bitboy-finished.svg"
+      ],
+      "sheet": "sheets/03-bitboy.svg",
+      "parameterSnapshot": "specs/像素小子参数快照.json"
+    },
+    {
+      "shape": "robot_jelly",
+      "name": "泡泡水母",
+      "key": "jelly",
+      "number": "04",
+      "light": "bubbles",
+      "position": [
+        0.52,
+        0.52
+      ],
+      "color": "#68eaff",
+      "glow": false,
+      "collection": "classic",
+      "story": "像一块装了情绪传感器的海盐布丁。圆顶与波浪裙边让它轻盈、安静，又有一点外星感。",
+      "tag": "冰蓝果冻 · 圆顶 · 气泡感",
+      "geometry": {
+        "size": 1.24,
+        "kind": "extrusion",
+        "depth": 0.33,
+        "bevel": 0.16
+      },
+      "eyeLayout": {
+        "width": 0.27,
+        "height": 0.43,
+        "gap": 0.5,
+        "shiftY": 0.005
+      },
+      "colors": [
+        "#e5ffff",
+        "#8de2e6",
+        "#42a8c0"
+      ],
+      "eyeColor": "#275a76",
+      "workingPeriodSeconds": 1.3,
+      "completion": {
+        "expression": "happy",
+        "gesture": "nod",
+        "deduplicate": "per native engine and completion key"
+      },
+      "definition": "characters/04-jelly.json",
+      "icons": [
+        "icons/04-jelly-rest.svg",
+        "icons/04-jelly-front.svg",
+        "icons/04-jelly-working.svg",
+        "icons/04-jelly-finished.svg"
+      ],
+      "sheet": "sheets/04-jelly.svg",
+      "parameterSnapshot": "specs/泡泡水母参数快照.json"
+    },
+    {
+      "shape": "robot_oni",
+      "name": "赤焰鬼丸",
+      "key": "oni",
+      "number": "05",
+      "light": "diamond",
+      "position": [
+        0,
+        0.47
+      ],
+      "color": "#ffe49a",
+      "glow": true,
+      "collection": "classic",
+      "story": "有脾气的桌面守卫。上挑金角和深色面甲保留武士的锋利感，眼睛仍然可以温柔地眨动。",
+      "tag": "朱红武士 · 双角 · 金色战纹",
+      "geometry": {
+        "size": 1.24,
+        "kind": "extrusion",
+        "depth": 0.38,
+        "bevel": 0.07
+      },
+      "eyeLayout": {
+        "width": 0.29,
+        "height": 0.23,
+        "gap": 0.5,
+        "shiftY": 0.1
+      },
+      "colors": [
+        "#ffad76",
+        "#e85c3f",
+        "#9a2d32"
+      ],
+      "eyeColor": "#ffe49a",
+      "workingPeriodSeconds": 1.3,
+      "completion": {
+        "expression": "happy",
+        "gesture": "nod",
+        "deduplicate": "per native engine and completion key"
+      },
+      "definition": "characters/05-oni.json",
+      "icons": [
+        "icons/05-oni-rest.svg",
+        "icons/05-oni-front.svg",
+        "icons/05-oni-working.svg",
+        "icons/05-oni-finished.svg"
+      ],
+      "sheet": "sheets/05-oni.svg",
+      "parameterSnapshot": "specs/赤焰鬼丸参数快照.json"
+    },
+    {
+      "shape": "robot_luna",
+      "name": "月球邮差",
+      "key": "luna",
+      "number": "06",
+      "light": "star",
+      "position": [
+        0.43,
+        0.4
+      ],
+      "color": "#ffdd97",
+      "glow": false,
+      "collection": "classic",
+      "story": "每天往返月球，给你送一点宇宙里的好消息。圆形头盔、两只耳舱和一枚小星星，组成它的制服。",
+      "tag": "薰衣草头盔 · 耳舱 · 星星邮戳",
+      "geometry": {
+        "size": 1.23,
+        "kind": "extrusion",
+        "depth": 0.38,
+        "bevel": 0.17
+      },
+      "eyeLayout": {
+        "width": 0.23,
+        "height": 0.4,
+        "gap": 0.46,
+        "shiftY": 0.04
+      },
+      "colors": [
+        "#f4efff",
+        "#bdabe7",
+        "#7a70b6"
+      ],
+      "eyeColor": "#fcf6ff",
+      "workingPeriodSeconds": 1.3,
+      "completion": {
+        "expression": "happy",
+        "gesture": "nod",
+        "deduplicate": "per native engine and completion key"
+      },
+      "definition": "characters/06-luna.json",
+      "icons": [
+        "icons/06-luna-rest.svg",
+        "icons/06-luna-front.svg",
+        "icons/06-luna-working.svg",
+        "icons/06-luna-finished.svg"
+      ],
+      "sheet": "sheets/06-luna.svg",
+      "parameterSnapshot": "specs/月球邮差参数快照.json"
+    },
+    {
+      "shape": "robot_sprout",
+      "name": "苔藓园丁",
+      "key": "sprout",
+      "number": "07",
+      "light": "seeds",
+      "position": [
+        0,
+        -0.6
+      ],
+      "color": "#e5daac",
+      "glow": false,
+      "collection": "classic",
+      "story": "用光合作用为自己充电，负责照看你没空照顾的小情绪。叶芽和不对称眼罩让它更像活物。",
+      "tag": "鼠尾草绿 · 新芽 · 生物机械",
+      "geometry": {
+        "size": 1.25,
+        "kind": "extrusion",
+        "depth": 0.32,
+        "bevel": 0.14
+      },
+      "eyeLayout": {
+        "width": 0.24,
+        "height": 0.4,
+        "gap": 0.5,
+        "shiftY": 0.13
+      },
+      "colors": [
+        "#d7e8a7",
+        "#9eb879",
+        "#658b66"
+      ],
+      "eyeColor": "#fff2cb",
+      "workingPeriodSeconds": 1.3,
+      "completion": {
+        "expression": "happy",
+        "gesture": "nod",
+        "deduplicate": "per native engine and completion key"
+      },
+      "definition": "characters/07-sprout.json",
+      "icons": [
+        "icons/07-sprout-rest.svg",
+        "icons/07-sprout-front.svg",
+        "icons/07-sprout-working.svg",
+        "icons/07-sprout-finished.svg"
+      ],
+      "sheet": "sheets/07-sprout.svg",
+      "parameterSnapshot": "specs/苔藓园丁参数快照.json"
+    },
+    {
+      "shape": "robot_radio",
+      "name": "磁带电台",
+      "key": "radio",
+      "number": "08",
+      "light": "dial",
+      "position": [
+        0.62,
+        -0.58
+      ],
+      "color": "#ffdf84",
+      "glow": false,
+      "collection": "classic",
+      "story": "脑袋里住着一间深夜电台。圆角箱体与扬声器纹路像旧磁带机，暖色外壳有一点玩具的笨拙。",
+      "tag": "芥末黄 · 扬声器 · 模拟年代",
+      "geometry": {
+        "size": 1.2,
+        "kind": "extrusion",
+        "depth": 0.35,
+        "bevel": 0.09
+      },
+      "eyeLayout": {
+        "width": 0.22,
+        "height": 0.37,
+        "gap": 0.43,
+        "shiftY": 0.01
+      },
+      "colors": [
+        "#ffdf86",
+        "#eeb64b",
+        "#b77e30"
+      ],
+      "eyeColor": "#f8e8b2",
+      "workingPeriodSeconds": 1.3,
+      "completion": {
+        "expression": "happy",
+        "gesture": "nod",
+        "deduplicate": "per native engine and completion key"
+      },
+      "definition": "characters/08-radio.json",
+      "icons": [
+        "icons/08-radio-rest.svg",
+        "icons/08-radio-front.svg",
+        "icons/08-radio-working.svg",
+        "icons/08-radio-finished.svg"
+      ],
+      "sheet": "sheets/08-radio.svg",
+      "parameterSnapshot": "specs/磁带电台参数快照.json"
+    },
+    {
+      "shape": "robot_oracle",
+      "name": "星核法师",
+      "key": "oracle",
+      "number": "09",
+      "light": "diamond",
+      "position": [
+        0,
+        0.51
+      ],
+      "color": "#dcbbff",
+      "glow": true,
+      "collection": "classic",
+      "story": "一枚误把自己当机器人的魔法晶核。几何切面与符文灯带让它有棱角，也像一件发光的饰品。",
+      "tag": "电光蓝 · 菱形冠 · 紫色灵核",
+      "geometry": {
+        "size": 1.28,
+        "kind": "extrusion",
+        "depth": 0.39,
+        "bevel": 0.045
+      },
+      "eyeLayout": {
+        "width": 0.24,
+        "height": 0.36,
+        "gap": 0.46,
+        "shiftY": 0.07
+      },
+      "colors": [
+        "#9dcaff",
+        "#527ce1",
+        "#3b419f"
+      ],
+      "eyeColor": "#d9ffff",
+      "workingPeriodSeconds": 1.3,
+      "completion": {
+        "expression": "happy",
+        "gesture": "nod",
+        "deduplicate": "per native engine and completion key"
+      },
+      "definition": "characters/09-oracle.json",
+      "icons": [
+        "icons/09-oracle-rest.svg",
+        "icons/09-oracle-front.svg",
+        "icons/09-oracle-working.svg",
+        "icons/09-oracle-finished.svg"
+      ],
+      "sheet": "sheets/09-oracle.svg",
+      "parameterSnapshot": "specs/星核法师参数快照.json"
+    },
+    {
+      "shape": "robot_ninja",
+      "name": "墨墨忍者",
+      "key": "ninja",
+      "number": "10",
+      "light": "slashes",
+      "position": [
+        0.23,
+        0.6
+      ],
+      "color": "#c9ff6c",
+      "glow": true,
+      "collection": "classic",
+      "story": "话不多，行动很快。几乎全黑的菱角外壳，只留下一对荧光眼睛和一道醒目的斜切战纹。",
+      "tag": "石墨黑 · 酸橙绿 · 隐秘面罩",
+      "geometry": {
+        "size": 1.22,
+        "kind": "extrusion",
+        "depth": 0.36,
+        "bevel": 0.09
+      },
+      "eyeLayout": {
+        "width": 0.31,
+        "height": 0.18,
+        "gap": 0.55,
+        "shiftY": 0.04
+      },
+      "colors": [
+        "#667576",
+        "#35444a",
+        "#17232e"
+      ],
+      "eyeColor": "#c9ff6c",
+      "workingPeriodSeconds": 1.3,
+      "completion": {
+        "expression": "happy",
+        "gesture": "nod",
+        "deduplicate": "per native engine and completion key"
+      },
+      "definition": "characters/10-ninja.json",
+      "icons": [
+        "icons/10-ninja-rest.svg",
+        "icons/10-ninja-front.svg",
+        "icons/10-ninja-working.svg",
+        "icons/10-ninja-finished.svg"
+      ],
+      "sheet": "sheets/10-ninja.svg",
+      "parameterSnapshot": "specs/墨墨忍者参数快照.json"
+    },
+    {
+      "shape": "neonNight",
+      "name": "霓虹夜行",
+      "key": "neon",
+      "number": "11",
+      "light": "forehead-and-ears",
+      "position": [
+        0,
+        0.53
+      ],
+      "color": "#5df8ff",
+      "glow": true,
+      "collection": "classic",
+      "story": "在霓虹灯下工作的夜行伙伴。",
+      "tag": "霓虹 · 原生猫耳",
+      "geometry": {
+        "size": 1.22,
+        "kind": "extrusion",
+        "depth": 0.29,
+        "bevel": 0.14
+      },
+      "eyeLayout": {
+        "width": 0.24,
+        "height": 0.41,
+        "gap": 0.49,
+        "shiftY": 0.08
+      },
+      "colors": [
+        "#7379bd",
+        "#303953",
+        "#0d1626"
+      ],
+      "eyeColor": "#91f9fa",
+      "workingPeriodSeconds": 1.3,
+      "completion": {
+        "expression": "happy",
+        "gesture": "nod",
+        "deduplicate": "per native engine and completion key"
+      },
+      "definition": "characters/11-neon.json",
+      "icons": [
+        "icons/11-neon-rest.svg",
+        "icons/11-neon-front.svg",
+        "icons/11-neon-working.svg",
+        "icons/11-neon-finished.svg"
+      ],
+      "sheet": "sheets/11-neon.svg",
+      "parameterSnapshot": "../霓虹夜行参数快照.json"
+    },
+    {
+      "shape": "robot_cloudwhale",
+      "name": "云朵鲸",
+      "key": "cloudwhale",
+      "number": "12",
+      "light": "bubbles",
+      "position": [
+        0,
+        0.48
+      ],
+      "color": "#74badf",
+      "glow": false,
+      "collection": "wonder",
+      "story": "一朵忘记下雨的云，长出了鲸鱼尾巴。把忙碌藏在额头的小雨滴里。",
+      "tag": "云乳白 · 鲸尾 · 雨滴雀斑",
+      "geometry": {
+        "size": 1.23,
+        "kind": "extrusion",
+        "depth": 0.48,
+        "bevel": 0.2
+      },
+      "eyeLayout": {
+        "width": 0.22,
+        "height": 0.37,
+        "gap": 0.44,
+        "shiftY": 0.015
+      },
+      "colors": [
+        "#ffffff",
+        "#cce6f8",
+        "#7fa5cf"
+      ],
+      "eyeColor": "#28476b",
+      "workingPeriodSeconds": 1.3,
+      "completion": {
+        "expression": "happy",
+        "gesture": "nod",
+        "deduplicate": "per native engine and completion key"
+      },
+      "definition": "characters/12-cloudwhale.json",
+      "icons": [
+        "icons/12-cloudwhale-rest.svg",
+        "icons/12-cloudwhale-front.svg",
+        "icons/12-cloudwhale-working.svg",
+        "icons/12-cloudwhale-finished.svg"
+      ],
+      "sheet": "sheets/12-cloudwhale.svg",
+      "parameterSnapshot": "specs/云朵鲸参数快照.json"
+    },
+    {
+      "shape": "robot_lavatoast",
+      "name": "熔岩吐司",
+      "key": "lavatoast",
+      "number": "13",
+      "light": "bars",
+      "position": [
+        0,
+        0.52
+      ],
+      "color": "#ffbc55",
+      "glow": true,
+      "collection": "wonder",
+      "story": "看起来刚刚烤焦，其实正在用地心热量替你处理工作。笑起来像一块热黄油。",
+      "tag": "焦糖外壳 · 岩浆裂纹 · 奶油心",
+      "geometry": {
+        "size": 1.22,
+        "kind": "extrusion",
+        "depth": 0.48,
+        "bevel": 0.09
+      },
+      "eyeLayout": {
+        "width": 0.26,
+        "height": 0.29,
+        "gap": 0.53,
+        "shiftY": 0.02
+      },
+      "colors": [
+        "#e79550",
+        "#8b4636",
+        "#382831"
+      ],
+      "eyeColor": "#ffdf81",
+      "workingPeriodSeconds": 1.3,
+      "completion": {
+        "expression": "happy",
+        "gesture": "nod",
+        "deduplicate": "per native engine and completion key"
+      },
+      "definition": "characters/13-lavatoast.json",
+      "icons": [
+        "icons/13-lavatoast-rest.svg",
+        "icons/13-lavatoast-front.svg",
+        "icons/13-lavatoast-working.svg",
+        "icons/13-lavatoast-finished.svg"
+      ],
+      "sheet": "sheets/13-lavatoast.svg",
+      "parameterSnapshot": "specs/熔岩吐司参数快照.json"
+    },
+    {
+      "shape": "robot_puddingghost",
+      "name": "布丁幽灵",
+      "key": "puddingghost",
+      "number": "14",
+      "light": "dot",
+      "position": [
+        0,
+        0.53
+      ],
+      "color": "#82bdaa",
+      "glow": false,
+      "collection": "wonder",
+      "story": "不吓人，只会偷偷把你的待办吃掉。它的裙边是一圈晃来晃去的布丁褶。",
+      "tag": "薄荷乳白 · 波浪裙 · 透明糖衣",
+      "geometry": {
+        "size": 1.23,
+        "kind": "extrusion",
+        "depth": 0.44,
+        "bevel": 0.21
+      },
+      "eyeLayout": {
+        "width": 0.23,
+        "height": 0.45,
+        "gap": 0.4,
+        "shiftY": 0.02
+      },
+      "colors": [
+        "#fcfff0",
+        "#cce9d6",
+        "#84baad"
+      ],
+      "eyeColor": "#365a59",
+      "workingPeriodSeconds": 1.3,
+      "completion": {
+        "expression": "happy",
+        "gesture": "nod",
+        "deduplicate": "per native engine and completion key"
+      },
+      "definition": "characters/14-puddingghost.json",
+      "icons": [
+        "icons/14-puddingghost-rest.svg",
+        "icons/14-puddingghost-front.svg",
+        "icons/14-puddingghost-working.svg",
+        "icons/14-puddingghost-finished.svg"
+      ],
+      "sheet": "sheets/14-puddingghost.svg",
+      "parameterSnapshot": "specs/布丁幽灵参数快照.json"
+    },
+    {
+      "shape": "robot_paperfox",
+      "name": "折纸狐狸",
+      "key": "paperfox",
+      "number": "15",
+      "light": "diamond",
+      "position": [
+        0,
+        0.51
+      ],
+      "color": "#ffe9aa",
+      "glow": false,
+      "collection": "wonder",
+      "story": "一张不肯安静躺着的珊瑚色纸。转头时折面和厚度一起显露，像被风吹活了。",
+      "tag": "珊瑚折面 · 尖耳 · 奶油鼻梁",
+      "geometry": {
+        "size": 1.26,
+        "kind": "extrusion",
+        "depth": 0.25,
+        "bevel": 0.035
+      },
+      "eyeLayout": {
+        "width": 0.26,
+        "height": 0.25,
+        "gap": 0.51,
+        "shiftY": 0.04
+      },
+      "colors": [
+        "#ffc8a5",
+        "#ec876e",
+        "#ad4d55"
+      ],
+      "eyeColor": "#542f45",
+      "workingPeriodSeconds": 1.3,
+      "completion": {
+        "expression": "happy",
+        "gesture": "nod",
+        "deduplicate": "per native engine and completion key"
+      },
+      "definition": "characters/15-paperfox.json",
+      "icons": [
+        "icons/15-paperfox-rest.svg",
+        "icons/15-paperfox-front.svg",
+        "icons/15-paperfox-working.svg",
+        "icons/15-paperfox-finished.svg"
+      ],
+      "sheet": "sheets/15-paperfox.svg",
+      "parameterSnapshot": "specs/折纸狐狸参数快照.json"
+    },
+    {
+      "shape": "robot_mossmountain",
+      "name": "苔岛山灵",
+      "key": "mossmountain",
+      "number": "16",
+      "light": "seeds",
+      "position": [
+        -0.32,
+        -0.43
+      ],
+      "color": "#beecb6",
+      "glow": false,
+      "collection": "wonder",
+      "story": "一座长着眼睛的迷你浮岛。头顶四季积雪，脸颊有两道刚刚醒来的溪流。",
+      "tag": "森林山体 · 雪冠 · 蓝绿溪流",
+      "geometry": {
+        "size": 1.25,
+        "kind": "extrusion",
+        "depth": 0.52,
+        "bevel": 0.065
+      },
+      "eyeLayout": {
+        "width": 0.23,
+        "height": 0.31,
+        "gap": 0.47,
+        "shiftY": 0.13
+      },
+      "colors": [
+        "#accc9c",
+        "#578b74",
+        "#2e565d"
+      ],
+      "eyeColor": "#f3efbd",
+      "workingPeriodSeconds": 1.3,
+      "completion": {
+        "expression": "happy",
+        "gesture": "nod",
+        "deduplicate": "per native engine and completion key"
+      },
+      "definition": "characters/16-mossmountain.json",
+      "icons": [
+        "icons/16-mossmountain-rest.svg",
+        "icons/16-mossmountain-front.svg",
+        "icons/16-mossmountain-working.svg",
+        "icons/16-mossmountain-finished.svg"
+      ],
+      "sheet": "sheets/16-mossmountain.svg",
+      "parameterSnapshot": "specs/苔岛山灵参数快照.json"
+    },
+    {
+      "shape": "robot_pomhedgehog",
+      "name": "绒球刺猬",
+      "key": "pomhedgehog",
+      "number": "17",
+      "light": "dot",
+      "position": [
+        0,
+        0.48
+      ],
+      "color": "#af805d",
+      "glow": false,
+      "collection": "wonder",
+      "story": "一团有边界感的毛球。刺是软的，眼神却认真得像一位微型管理员。",
+      "tag": "焦糖绒刺 · 肚兜 · 小豆鼻",
+      "geometry": {
+        "size": 1.25,
+        "kind": "extrusion",
+        "depth": 0.46,
+        "bevel": 0.12
+      },
+      "eyeLayout": {
+        "width": 0.2,
+        "height": 0.33,
+        "gap": 0.42,
+        "shiftY": 0.055
+      },
+      "colors": [
+        "#d8b78d",
+        "#967253",
+        "#554b49"
+      ],
+      "eyeColor": "#4a393a",
+      "workingPeriodSeconds": 1.3,
+      "completion": {
+        "expression": "happy",
+        "gesture": "nod",
+        "deduplicate": "per native engine and completion key"
+      },
+      "definition": "characters/17-pomhedgehog.json",
+      "icons": [
+        "icons/17-pomhedgehog-rest.svg",
+        "icons/17-pomhedgehog-front.svg",
+        "icons/17-pomhedgehog-working.svg",
+        "icons/17-pomhedgehog-finished.svg"
+      ],
+      "sheet": "sheets/17-pomhedgehog.svg",
+      "parameterSnapshot": "specs/绒球刺猬参数快照.json"
+    },
+    {
+      "shape": "robot_bubbleocto",
+      "name": "泡泡章鱼",
+      "key": "bubbleocto",
+      "number": "18",
+      "light": "bubbles",
+      "position": [
+        0.28,
+        0.48
+      ],
+      "color": "#e2c4ff",
+      "glow": false,
+      "collection": "wonder",
+      "story": "八只手忙着捉灵感，表情却永远从容。每颗吸盘都是一颗海底珍珠。",
+      "tag": "葡萄紫 · 卷腕 · 吸盘珠",
+      "geometry": {
+        "size": 1.25,
+        "kind": "extrusion",
+        "depth": 0.47,
+        "bevel": 0.18
+      },
+      "eyeLayout": {
+        "width": 0.25,
+        "height": 0.41,
+        "gap": 0.48,
+        "shiftY": -0.03
+      },
+      "colors": [
+        "#e6c9ff",
+        "#b28bdb",
+        "#6952a6"
+      ],
+      "eyeColor": "#382e63",
+      "workingPeriodSeconds": 1.3,
+      "completion": {
+        "expression": "happy",
+        "gesture": "nod",
+        "deduplicate": "per native engine and completion key"
+      },
+      "definition": "characters/18-bubbleocto.json",
+      "icons": [
+        "icons/18-bubbleocto-rest.svg",
+        "icons/18-bubbleocto-front.svg",
+        "icons/18-bubbleocto-working.svg",
+        "icons/18-bubbleocto-finished.svg"
+      ],
+      "sheet": "sheets/18-bubbleocto.svg",
+      "parameterSnapshot": "specs/泡泡章鱼参数快照.json"
+    },
+    {
+      "shape": "robot_cosmosnail",
+      "name": "宇宙蜗牛",
+      "key": "cosmosnail",
+      "number": "19",
+      "light": "star",
+      "position": [
+        0.3,
+        0.31
+      ],
+      "color": "#fff0a6",
+      "glow": true,
+      "collection": "wonder",
+      "story": "背着一整圈银河，慢慢把复杂问题搬回家。宇宙很大，它很稳。",
+      "tag": "蓝紫螺旋 · 星点 · 长长触角",
+      "geometry": {
+        "size": 1.24,
+        "kind": "extrusion",
+        "depth": 0.49,
+        "bevel": 0.16
+      },
+      "eyeLayout": {
+        "width": 0.22,
+        "height": 0.34,
+        "gap": 0.42,
+        "shiftY": 0.08
+      },
+      "colors": [
+        "#a7dce6",
+        "#6c8fc9",
+        "#464f8f"
+      ],
+      "eyeColor": "#fff4cf",
+      "workingPeriodSeconds": 1.3,
+      "completion": {
+        "expression": "happy",
+        "gesture": "nod",
+        "deduplicate": "per native engine and completion key"
+      },
+      "definition": "characters/19-cosmosnail.json",
+      "icons": [
+        "icons/19-cosmosnail-rest.svg",
+        "icons/19-cosmosnail-front.svg",
+        "icons/19-cosmosnail-working.svg",
+        "icons/19-cosmosnail-finished.svg"
+      ],
+      "sheet": "sheets/19-cosmosnail.svg",
+      "parameterSnapshot": "specs/宇宙蜗牛参数快照.json"
+    },
+    {
+      "shape": "robot_vinylvoid",
+      "name": "唱片黑洞",
+      "key": "vinylvoid",
+      "number": "20",
+      "light": "dial",
+      "position": [
+        0,
+        0.53
+      ],
+      "color": "#ffcf89",
+      "glow": true,
+      "collection": "wonder",
+      "story": "一颗喜欢听老唱片的黑洞。吸进去的是噪声，吐出来的是好主意。",
+      "tag": "墨蓝圆盘 · 同心轨道 · 橙色引力",
+      "geometry": {
+        "size": 1.2,
+        "kind": "extrusion",
+        "depth": 0.31,
+        "bevel": 0.13
+      },
+      "eyeLayout": {
+        "width": 0.24,
+        "height": 0.34,
+        "gap": 0.44,
+        "shiftY": 0.015
+      },
+      "colors": [
+        "#586681",
+        "#28354c",
+        "#131c34"
+      ],
+      "eyeColor": "#ffe7a6",
+      "workingPeriodSeconds": 1.3,
+      "completion": {
+        "expression": "happy",
+        "gesture": "nod",
+        "deduplicate": "per native engine and completion key"
+      },
+      "definition": "characters/20-vinylvoid.json",
+      "icons": [
+        "icons/20-vinylvoid-rest.svg",
+        "icons/20-vinylvoid-front.svg",
+        "icons/20-vinylvoid-working.svg",
+        "icons/20-vinylvoid-finished.svg"
+      ],
+      "sheet": "sheets/20-vinylvoid.svg",
+      "parameterSnapshot": "specs/唱片黑洞参数快照.json"
+    },
+    {
+      "shape": "robot_jellytower",
+      "name": "弹簧果冻",
+      "key": "jellytower",
+      "number": "21",
+      "light": "seeds",
+      "position": [
+        0,
+        0.52
+      ],
+      "color": "#fff0bc",
+      "glow": false,
+      "collection": "wonder",
+      "story": "把三层果冻叠成了一个小宇宙。身体可以扭，工作态度不能塌。",
+      "tag": "桃子粉 · 奶油夹层 · 拟态弹簧",
+      "geometry": {
+        "size": 1.23,
+        "kind": "extrusion",
+        "depth": 0.52,
+        "bevel": 0.17
+      },
+      "eyeLayout": {
+        "width": 0.24,
+        "height": 0.4,
+        "gap": 0.48,
+        "shiftY": 0.02
+      },
+      "colors": [
+        "#ffdbef",
+        "#e697c1",
+        "#aa6399"
+      ],
+      "eyeColor": "#62375d",
+      "workingPeriodSeconds": 1.3,
+      "completion": {
+        "expression": "happy",
+        "gesture": "nod",
+        "deduplicate": "per native engine and completion key"
+      },
+      "definition": "characters/21-jellytower.json",
+      "icons": [
+        "icons/21-jellytower-rest.svg",
+        "icons/21-jellytower-front.svg",
+        "icons/21-jellytower-working.svg",
+        "icons/21-jellytower-finished.svg"
+      ],
+      "sheet": "sheets/21-jellytower.svg",
+      "parameterSnapshot": "specs/弹簧果冻参数快照.json"
+    },
+    {
+      "shape": "robot_luckydice",
+      "name": "悬浮骰子",
+      "key": "luckydice",
+      "number": "22",
+      "light": "dot",
+      "position": [
+        0,
+        0.49
+      ],
+      "color": "#bd7488",
+      "glow": false,
+      "collection": "wonder",
+      "story": "把运气装进一颗有厚度的奶白骰子。它认真思考，不会替你胡乱掷答案。",
+      "tag": "瓷白厚块 · 草莓点数 · 好运",
+      "geometry": {
+        "size": 1.19,
+        "kind": "extrusion",
+        "depth": 0.68,
+        "bevel": 0.12
+      },
+      "eyeLayout": {
+        "width": 0.23,
+        "height": 0.34,
+        "gap": 0.47,
+        "shiftY": 0.04
+      },
+      "colors": [
+        "#fffdf2",
+        "#ebddd3",
+        "#b8a6a8"
+      ],
+      "eyeColor": "#a85469",
+      "workingPeriodSeconds": 1.3,
+      "completion": {
+        "expression": "happy",
+        "gesture": "nod",
+        "deduplicate": "per native engine and completion key"
+      },
+      "definition": "characters/22-luckydice.json",
+      "icons": [
+        "icons/22-luckydice-rest.svg",
+        "icons/22-luckydice-front.svg",
+        "icons/22-luckydice-working.svg",
+        "icons/22-luckydice-finished.svg"
+      ],
+      "sheet": "sheets/22-luckydice.svg",
+      "parameterSnapshot": "specs/悬浮骰子参数快照.json"
+    },
+    {
+      "shape": "robot_lanternpuffer",
+      "name": "灯笼河豚",
+      "key": "lanternpuffer",
+      "number": "23",
+      "light": "diamond",
+      "position": [
+        0,
+        0.49
+      ],
+      "color": "#fff4ba",
+      "glow": true,
+      "collection": "wonder",
+      "story": "一紧张就把自己点亮的河豚。每根刺都圆钝，像一盏暖黄的小夜灯。",
+      "tag": "柠檬金 · 圆刺 · 冷光肚皮",
+      "geometry": {
+        "size": 1.26,
+        "kind": "extrusion",
+        "depth": 0.57,
+        "bevel": 0.16
+      },
+      "eyeLayout": {
+        "width": 0.23,
+        "height": 0.34,
+        "gap": 0.45,
+        "shiftY": 0.025
+      },
+      "colors": [
+        "#fff4a5",
+        "#d9ca61",
+        "#929a50"
+      ],
+      "eyeColor": "#415a55",
+      "workingPeriodSeconds": 1.3,
+      "completion": {
+        "expression": "happy",
+        "gesture": "nod",
+        "deduplicate": "per native engine and completion key"
+      },
+      "definition": "characters/23-lanternpuffer.json",
+      "icons": [
+        "icons/23-lanternpuffer-rest.svg",
+        "icons/23-lanternpuffer-front.svg",
+        "icons/23-lanternpuffer-working.svg",
+        "icons/23-lanternpuffer-finished.svg"
+      ],
+      "sheet": "sheets/23-lanternpuffer.svg",
+      "parameterSnapshot": "specs/灯笼河豚参数快照.json"
+    },
+    {
+      "shape": "robot_stardrop",
+      "name": "星轨水滴",
+      "key": "stardrop",
+      "number": "24",
+      "light": "star",
+      "position": [
+        0.21,
+        0.53
+      ],
+      "color": "#d5ffff",
+      "glow": true,
+      "collection": "wonder",
+      "story": "从一条星轨上掉下来的玻璃水滴。额头那点光，是它尚未用完的宇宙电量。",
+      "tag": "青蓝玻璃 · 偏锋彗尾 · 星屑",
+      "geometry": {
+        "size": 1.24,
+        "kind": "extrusion",
+        "depth": 0.54,
+        "bevel": 0.19
+      },
+      "eyeLayout": {
+        "width": 0.22,
+        "height": 0.4,
+        "gap": 0.44,
+        "shiftY": 0.1
+      },
+      "colors": [
+        "#ccfff4",
+        "#65c7dd",
+        "#4967ad"
+      ],
+      "eyeColor": "#244f77",
+      "workingPeriodSeconds": 1.3,
+      "completion": {
+        "expression": "happy",
+        "gesture": "nod",
+        "deduplicate": "per native engine and completion key"
+      },
+      "definition": "characters/24-stardrop.json",
+      "icons": [
+        "icons/24-stardrop-rest.svg",
+        "icons/24-stardrop-front.svg",
+        "icons/24-stardrop-working.svg",
+        "icons/24-stardrop-finished.svg"
+      ],
+      "sheet": "sheets/24-stardrop.svg",
+      "parameterSnapshot": "specs/星轨水滴参数快照.json"
+    },
+    {
+      "shape": "robot_graffitigloop",
+      "name": "吐舌涂鸦",
+      "key": "graffitigloop",
+      "number": "25",
+      "light": "slashes",
+      "position": [
+        0.15,
+        0.51
+      ],
+      "color": "#f6ffbd",
+      "glow": false,
+      "collection": "wonder",
+      "story": "一滴不肯按形状待着的油漆。它的灵感会溅出来，完成事情还要调皮一下。",
+      "tag": "酸橙怪团 · 油漆滴 · 粉舌头",
+      "geometry": {
+        "size": 1.25,
+        "kind": "extrusion",
+        "depth": 0.38,
+        "bevel": 0.15
+      },
+      "eyeLayout": {
+        "width": 0.28,
+        "height": 0.36,
+        "gap": 0.51,
+        "shiftY": -0.01
+      },
+      "colors": [
+        "#edff9c",
+        "#b9d65a",
+        "#688b50"
+      ],
+      "eyeColor": "#3d4253",
+      "workingPeriodSeconds": 1.3,
+      "completion": {
+        "expression": "happy",
+        "gesture": "nod",
+        "deduplicate": "per native engine and completion key"
+      },
+      "definition": "characters/25-graffitigloop.json",
+      "icons": [
+        "icons/25-graffitigloop-rest.svg",
+        "icons/25-graffitigloop-front.svg",
+        "icons/25-graffitigloop-working.svg",
+        "icons/25-graffitigloop-finished.svg"
+      ],
+      "sheet": "sheets/25-graffitigloop.svg",
+      "parameterSnapshot": "specs/吐舌涂鸦参数快照.json"
+    },
+    {
+      "shape": "robot_cheesemoon",
+      "name": "奶酪月球",
+      "key": "cheesemoon",
+      "number": "26",
+      "light": "dot",
+      "position": [
+        0,
+        0.4
+      ],
+      "color": "#fff4ca",
+      "glow": false,
+      "collection": "wonder",
+      "story": "月球真的是奶酪做的吗？它不回答，只把自己的小坑洞擦得亮亮的。",
+      "tag": "奶黄月岩 · 孔洞错觉 · 月岩厚切",
+      "geometry": {
+        "size": 1.23,
+        "kind": "extrusion",
+        "depth": 0.6,
+        "bevel": 0.055
+      },
+      "eyeLayout": {
+        "width": 0.24,
+        "height": 0.36,
+        "gap": 0.46,
+        "shiftY": 0.04
+      },
+      "colors": [
+        "#ffed9e",
+        "#e6be58",
+        "#b38343"
+      ],
+      "eyeColor": "#805333",
+      "workingPeriodSeconds": 1.3,
+      "completion": {
+        "expression": "happy",
+        "gesture": "nod",
+        "deduplicate": "per native engine and completion key"
+      },
+      "definition": "characters/26-cheesemoon.json",
+      "icons": [
+        "icons/26-cheesemoon-rest.svg",
+        "icons/26-cheesemoon-front.svg",
+        "icons/26-cheesemoon-working.svg",
+        "icons/26-cheesemoon-finished.svg"
+      ],
+      "sheet": "sheets/26-cheesemoon.svg",
+      "parameterSnapshot": "specs/奶酪月球参数快照.json"
+    },
+    {
+      "shape": "robot_foldbutterfly",
+      "name": "绯红折翼",
+      "key": "foldbutterfly",
+      "number": "27",
+      "light": "diamond",
+      "position": [
+        0,
+        0.46
+      ],
+      "color": "#ffdeba",
+      "glow": true,
+      "collection": "wonder",
+      "story": "像一枚会思考的蝴蝶结，也像两片折起的彩色玻璃。每次回头都换一组折面。",
+      "tag": "宝石红 · 玻璃翼 · 靛蓝中轴",
+      "geometry": {
+        "size": 1.25,
+        "kind": "extrusion",
+        "depth": 0.28,
+        "bevel": 0.045
+      },
+      "eyeLayout": {
+        "width": 0.22,
+        "height": 0.32,
+        "gap": 0.39,
+        "shiftY": 0.035
+      },
+      "colors": [
+        "#f6afd3",
+        "#c963a2",
+        "#683d87"
+      ],
+      "eyeColor": "#fdf0c9",
+      "workingPeriodSeconds": 1.3,
+      "completion": {
+        "expression": "happy",
+        "gesture": "nod",
+        "deduplicate": "per native engine and completion key"
+      },
+      "definition": "characters/27-foldbutterfly.json",
+      "icons": [
+        "icons/27-foldbutterfly-rest.svg",
+        "icons/27-foldbutterfly-front.svg",
+        "icons/27-foldbutterfly-working.svg",
+        "icons/27-foldbutterfly-finished.svg"
+      ],
+      "sheet": "sheets/27-foldbutterfly.svg",
+      "parameterSnapshot": "specs/绯红折翼参数快照.json"
+    },
+    {
+      "shape": "robot_jadecactus",
+      "name": "翡翠仙人掌",
+      "key": "jadecactus",
+      "number": "28",
+      "light": "dot",
+      "position": [
+        0.08,
+        0.7
+      ],
+      "color": "#efc4bf",
+      "glow": false,
+      "collection": "wonder",
+      "story": "一株把刺磨成玉点的仙人掌。举着双手，像随时准备说“这件事交给我”。",
+      "tag": "翡翠釉 · 双臂 · 桃色花苞",
+      "geometry": {
+        "size": 1.24,
+        "kind": "extrusion",
+        "depth": 0.47,
+        "bevel": 0.17
+      },
+      "eyeLayout": {
+        "width": 0.2,
+        "height": 0.35,
+        "gap": 0.33,
+        "shiftY": 0.06
+      },
+      "colors": [
+        "#b1ebbd",
+        "#61ad8e",
+        "#347466"
+      ],
+      "eyeColor": "#204d49",
+      "workingPeriodSeconds": 1.3,
+      "completion": {
+        "expression": "happy",
+        "gesture": "nod",
+        "deduplicate": "per native engine and completion key"
+      },
+      "definition": "characters/28-jadecactus.json",
+      "icons": [
+        "icons/28-jadecactus-rest.svg",
+        "icons/28-jadecactus-front.svg",
+        "icons/28-jadecactus-working.svg",
+        "icons/28-jadecactus-finished.svg"
+      ],
+      "sheet": "sheets/28-jadecactus.svg",
+      "parameterSnapshot": "specs/翡翠仙人掌参数快照.json"
+    },
+    {
+      "shape": "robot_moonshroom",
+      "name": "蘑菇占卜师",
+      "key": "moonshroom",
+      "number": "29",
+      "light": "star",
+      "position": [
+        0.03,
+        0.49
+      ],
+      "color": "#ffedbe",
+      "glow": true,
+      "collection": "wonder",
+      "story": "总是把帽檐压得很低的小蘑菇。帽上的星斑会告诉你，它还在努力思考。",
+      "tag": "宽檐菌帽 · 月斑 · 奶油菌柄",
+      "geometry": {
+        "size": 1.24,
+        "kind": "extrusion",
+        "depth": 0.45,
+        "bevel": 0.16
+      },
+      "eyeLayout": {
+        "width": 0.19,
+        "height": 0.33,
+        "gap": 0.33,
+        "shiftY": 0.17
+      },
+      "colors": [
+        "#d5b5e5",
+        "#9d7cbe",
+        "#584b81"
+      ],
+      "eyeColor": "#57476a",
+      "workingPeriodSeconds": 1.3,
+      "completion": {
+        "expression": "happy",
+        "gesture": "nod",
+        "deduplicate": "per native engine and completion key"
+      },
+      "definition": "characters/29-moonshroom.json",
+      "icons": [
+        "icons/29-moonshroom-rest.svg",
+        "icons/29-moonshroom-front.svg",
+        "icons/29-moonshroom-working.svg",
+        "icons/29-moonshroom-finished.svg"
+      ],
+      "sheet": "sheets/29-moonshroom.svg",
+      "parameterSnapshot": "specs/蘑菇占卜师参数快照.json"
+    },
+    {
+      "shape": "robot_velvetbat",
+      "name": "天鹅绒蝠",
+      "key": "velvetbat",
+      "number": "30",
+      "light": "diamond",
+      "position": [
+        0,
+        0.48
+      ],
+      "color": "#d6badf",
+      "glow": false,
+      "collection": "wonder",
+      "story": "看上去很酷，其实怕你熬夜。两只宽翼像一条能把烦恼裹起来的小披风。",
+      "tag": "莓紫绒翼 · 月白小牙 · 高耳",
+      "geometry": {
+        "size": 1.25,
+        "kind": "extrusion",
+        "depth": 0.39,
+        "bevel": 0.1
+      },
+      "eyeLayout": {
+        "width": 0.23,
+        "height": 0.31,
+        "gap": 0.4,
+        "shiftY": 0.035
+      },
+      "colors": [
+        "#b59ac5",
+        "#755888",
+        "#403751"
+      ],
+      "eyeColor": "#eedca2",
+      "workingPeriodSeconds": 1.3,
+      "completion": {
+        "expression": "happy",
+        "gesture": "nod",
+        "deduplicate": "per native engine and completion key"
+      },
+      "definition": "characters/30-velvetbat.json",
+      "icons": [
+        "icons/30-velvetbat-rest.svg",
+        "icons/30-velvetbat-front.svg",
+        "icons/30-velvetbat-working.svg",
+        "icons/30-velvetbat-finished.svg"
+      ],
+      "sheet": "sheets/30-velvetbat.svg",
+      "parameterSnapshot": "specs/天鹅绒蝠参数快照.json"
+    },
+    {
+      "shape": "robot_chromaknot",
+      "name": "彩虹拓扑",
+      "key": "chromaknot",
+      "number": "31",
+      "light": "star",
+      "position": [
+        0,
+        -0.47
+      ],
+      "color": "#f9eac4",
+      "glow": false,
+      "collection": "wonder",
+      "story": "一个试图把自己解开的彩色结。看起来有点不可能，却每次都能稳稳回到原位。",
+      "tag": "三叶体 · 交叠色带 · 不可能结",
+      "geometry": {
+        "size": 1.26,
+        "kind": "extrusion",
+        "depth": 0.56,
+        "bevel": 0.2
+      },
+      "eyeLayout": {
+        "width": 0.23,
+        "height": 0.34,
+        "gap": 0.45,
+        "shiftY": 0.015
+      },
+      "colors": [
+        "#c6d8ff",
+        "#a0a6de",
+        "#77649e"
+      ],
+      "eyeColor": "#423b69",
+      "workingPeriodSeconds": 1.3,
+      "completion": {
+        "expression": "happy",
+        "gesture": "nod",
+        "deduplicate": "per native engine and completion key"
+      },
+      "definition": "characters/31-chromaknot.json",
+      "icons": [
+        "icons/31-chromaknot-rest.svg",
+        "icons/31-chromaknot-front.svg",
+        "icons/31-chromaknot-working.svg",
+        "icons/31-chromaknot-finished.svg"
+      ],
+      "sheet": "sheets/31-chromaknot.svg",
+      "parameterSnapshot": "specs/彩虹拓扑参数快照.json"
+    }
+  ]
+}
