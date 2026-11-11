@@ -6,7 +6,40 @@
 
 当前发布为 **v1.4.3 社区预览版**。完整包自带 Node.js，解压后双击启动，无需安装开发环境。请下载名称带 **macOS-arm64** 的 ZIP；GitHub 自动生成的 Source code 压缩包只包含源码。
 
+## 头像展示
+
+### 31 款原创动态角色
+
 ![31 款原创动态角色](runtime-bean/library/机器人头像库总览.png)
+
+### 11 款虚拟人物头像
+
+这 11 款也已包含在完整包中，均为维护者生成的非真人图像。不同 Bot 可以分别选择动态角色或人物头像。
+
+下方为静态预览，点击可查看原图。在 Bot 窗口中，人物头像支持 **整图轻倾斜、悬停转正、移开回位、工作柔光与完成轻弹**，五官和表情保持原样。
+
+<table>
+  <tr>
+    <td align="center"><a href="runtime-bean/photos/fragrance.png"><img src="runtime-bean/photos/fragrance.png" alt="香氛街区头像" width="120" height="120"></a><br>香氛街区</td>
+    <td align="center"><a href="runtime-bean/photos/lotus.png"><img src="runtime-bean/photos/lotus.png" alt="江南贵女头像" width="120" height="120"></a><br>江南贵女</td>
+    <td align="center"><a href="runtime-bean/photos/designweek.png"><img src="runtime-bean/photos/designweek.png" alt="设计周广场头像" width="120" height="120"></a><br>设计周广场</td>
+    <td align="center"><a href="runtime-bean/photos/metro.png"><img src="runtime-bean/photos/metro.png" alt="地铁广场头像" width="120" height="120"></a><br>地铁广场</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="runtime-bean/photos/skywalk.png"><img src="runtime-bean/photos/skywalk.png" alt="空中连廊头像" width="120" height="120"></a><br>空中连廊</td>
+    <td align="center"><a href="runtime-bean/photos/park.png"><img src="runtime-bean/photos/park.png" alt="公园日常头像" width="120" height="120"></a><br>公园日常</td>
+    <td align="center"><a href="runtime-bean/photos/citynight.png"><img src="runtime-bean/photos/citynight.png" alt="城市夜色头像" width="120" height="120"></a><br>城市夜色</td>
+    <td align="center"><a href="runtime-bean/photos/flowerfield.png"><img src="runtime-bean/photos/flowerfield.png" alt="山野花田头像" width="120" height="120"></a><br>山野花田</td>
+  </tr>
+  <tr>
+    <td align="center"><a href="runtime-bean/photos/sunnybeach.png"><img src="runtime-bean/photos/sunnybeach.png" alt="海滩晴蓝头像" width="120" height="120"></a><br>海滩晴蓝</td>
+    <td align="center"><a href="runtime-bean/photos/seabreeze.png"><img src="runtime-bean/photos/seabreeze.png" alt="海风白裙头像" width="120" height="120"></a><br>海风白裙</td>
+    <td align="center"><a href="runtime-bean/photos/lakecafe.png"><img src="runtime-bean/photos/lakecafe.png" alt="湖畔咖啡头像" width="120" height="120"></a><br>湖畔咖啡</td>
+    <td></td>
+  </tr>
+</table>
+
+选择入口：**对话详情 → 点击头像 → 写真头像 → 应用头像**。
 
 ## 支持范围
 
