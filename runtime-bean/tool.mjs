@@ -43,6 +43,8 @@ try{
     process.exit(0);
   }
   console.log(`头像兼容检查通过：Grok Bot ${checked.version}，使用 ${checked.adapterVersion} 适配器。`);
+  // Same reviewed code under a different label/package: safe to load, but not window-accepted.
+  if(checked.compatibilityMode!=='verified-build')console.log(`提示：Grok Bot ${checked.version} 的头像相关代码与已验证的 ${checked.adapterVersion} 一致，但该客户端版本尚未经过人工窗口验收。如发现显示异常，请提交兼容性反馈。`);
   readConfig();
   let available=[];try{available=bots()}catch{}
   if(!values.configure&&await alreadyActive(checked)){console.log('头像工具已在运行。打开任意 Bot 详情，点击头像选择款式。');process.exit(0)}
