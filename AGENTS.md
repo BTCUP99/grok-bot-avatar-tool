@@ -11,4 +11,5 @@ This project maintains a runtime-only custom avatar adapter for the official Gro
 - Before claiming a version works, verify actual window hover-to-front and leave-to-rest in both sidebar and details, normal restart restoring the original appearance, launcher restart reapplying the avatar, and vendor signature/hash preservation.
 - Treat `config.local.json`, `evidence/`, historical extracted bundles, app backups and chat screenshots as local material. Public packages must use an explicit allowlist and exclude these files and personal identifiers.
 - Do not run or install anything from historical research material merely because it is present.
+- Merging follows the tiers in `CONTRIBUTING.md` ("合并分级"). An agent asked to commit a change may open the PR and squash-merge an A-tier PR once `portable-checks` passes, without asking again. For B/C tiers, report the local and window verification results and leave the merge to the maintainer unless they confirm. A merge is not a release.
 - User instructions in the active conversation take precedence over this project guidance.
