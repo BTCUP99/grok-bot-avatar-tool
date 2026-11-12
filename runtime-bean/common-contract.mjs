@@ -1,5 +1,5 @@
 // Each signed release is pinned by patch.mjs before these private names are used.
-// The 0.78 releases share bindings; 0.79.4 renamed several render helpers.
+// The 0.78 releases share bindings; 0.79.4 and 1.0.1 share the reviewed renderer helpers.
 const nativeBindings = Object.freeze({
   rendererEntry: 'function Xg(e,t,n,r,i={}){',
   exportStart: 'export{Nn as $',
@@ -16,7 +16,7 @@ const helperNames0794 = Object.freeze({Dp:'kp',kp:'jp',jp:'Np',Hp:'Wp',Hg:'Wg'})
 
 export function commonBindings(version) {
   if (version === '0.78.4' || version === '0.78.5') return nativeBindings;
-  if (version === '0.79.4') return nativeBindings0794;
+  if (version === '0.79.4' || version === '1.0.1') return nativeBindings0794;
   throw Error('No native renderer contract for Grok Bot ' + version);
 }
 
@@ -24,7 +24,7 @@ export function commonBindings(version) {
 // exist but refer to different functions, so changing the vendor module is unsafe.
 export function bindCommonHelpers(source, version) {
   commonBindings(version);
-  return version === '0.79.4'
+  return version === '0.79.4' || version === '1.0.1'
     ? source.replace(/\b(?:Dp|kp|jp|Hp|Hg)\b/g, name => helperNames0794[name])
     : source;
 }

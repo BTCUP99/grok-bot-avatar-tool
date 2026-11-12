@@ -52,6 +52,6 @@ for(let i=0;i<30;i++){cat.advance(1/60);const s=milkcat.O(cat.frame(),palette,96
 assert(new Set(catFrames).size>4);
 assert.throws(()=>build(archive,id,{shape:'not-supported'}),/Unsupported/);
 assert.throws(()=>build(archive,'not-a-uuid'),/UUID/);
-assert.throws(()=>build({read:()=>Buffer.from('unsupported source')},id),/hash mismatch/);
+assert.throws(()=>build({...archive,read:()=>Buffer.from('unsupported source')},id),error=>error.code==='AVATAR_INTERFACE_CHANGED'&&error.reason==='module-fingerprint');
 assert.equal(sha(readFileSync(asarPath)),officialHash);
 console.log(JSON.stringify({passed:true,nativeGazeReturnCycles:6,originalShapesCompared:25,originalShapePoseComparisons:150,milkcatMatchesSelectedDesignPoseSizes:30,blink:true,unsupportedInputRejected:true,officialBundleUnchanged:true,scope:'offline; perform actual window hover acceptance separately'},null,2));

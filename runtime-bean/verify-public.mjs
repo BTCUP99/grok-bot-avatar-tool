@@ -76,7 +76,7 @@ async function main(){
   }
   const jsFiles=[...new Set(publicEntries.filter(entry=>/\.(?:mjs|js)$/.test(entry.source)).map(entry=>entry.source))];
   for(const file of jsFiles)execFileSync(process.execPath,['--check',resolve(root,file)],{stdio:'pipe'});
-  for(const script of ['verify-tool.mjs','verify-photos.mjs']){
+  for(const script of ['verify-compatibility.mjs','verify-tool.mjs','verify-photos.mjs']){
     execFileSync(process.execPath,[fileURLToPath(new URL('./'+script,import.meta.url)),'--portable'],{stdio:'inherit'});
   }
   console.log(JSON.stringify({passed:true,scope:'portable; installed-app and real-window acceptance remain separate',...publication,readmeCopiesMatch:true,trackedFilesChecked,choices:42,nativePNGs,photoPNGs:11,syntaxFiles:jsFiles.length},null,2));

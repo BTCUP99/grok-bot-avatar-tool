@@ -1,6 +1,6 @@
 {
   "name": "grok-bot-avatar-tool",
-  "version": "1.4.4",
+  "version": "1.5.0",
   "description": "Thirty-one native avatars and eleven interactive portrait avatars, independently selectable per Bot.",
   "type": "module",
   "license": "MIT",
@@ -10,7 +10,7 @@
   "scripts": {
     "start": "node runtime-bean/tool.mjs",
     "configure": "node runtime-bean/tool.mjs --configure",
-    "test": "node runtime-bean/verify-tool.mjs && node runtime-bean/verify-photos.mjs && node runtime-bean/verify-library.mjs && node runtime-bean/verify.mjs && node runtime-bean/verify-neon.mjs",
+    "test": "node runtime-bean/verify-compatibility.mjs && node runtime-bean/verify-tool.mjs && node runtime-bean/verify-photos.mjs && node runtime-bean/verify-library.mjs && node runtime-bean/verify.mjs && node runtime-bean/verify-neon.mjs",
     "prepare:runtime": "node runtime-bean/prepare-runtime.mjs",
     "package": "node runtime-bean/package-library.mjs",
     "test:portable": "node runtime-bean/verify-public.mjs",

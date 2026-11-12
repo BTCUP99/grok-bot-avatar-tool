@@ -1,6 +1,12 @@
 # Security boundaries
 
-- This is a local community runtime adapter for a pinned official build.
+- This is a local community runtime adapter for reviewed official avatar modules.
+- Verify official identity/signature, architecture and ASAR integrity before
+  examining compatibility. Client version labels do not grant or deny access.
+  Pin the reviewed avatar modules and their JavaScript dependency closure,
+  check active import relationships, then validate patch anchors and syntax.
+  Legacy adapters without a dependency manifest retain their reviewed whole
+  archive fingerprint as a conservative fallback. Unknown code is not loaded.
 - The application bundle and signature are never modified or re-signed.
 - Only Bots with a local avatar assignment are visually overridden; groups and
   unassigned Bots remain on the official path. No Bot messages are sent.

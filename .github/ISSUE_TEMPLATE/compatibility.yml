@@ -10,7 +10,7 @@ body:
     id: tool-version
     attributes:
       label: 头像工具版本
-      description: 例如 1.4.4；下载包名或 package.json 中可查看。
+      description: 例如 1.5.0；下载包名或 package.json 中可查看。
     validations:
       required: true
   - type: input
