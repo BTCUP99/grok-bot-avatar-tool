@@ -92,7 +92,7 @@ if(process.argv.includes('--portable')){
   console.log(JSON.stringify({passed:true,scope:'portable; official app adaptation is not tested',nativePickerCards:libraryCharacters.length,perBotSelectionCancelRestore:true,perBotActivity:true,bridgeContextResolution:true,configMigrationAndValidation:true,setupOriginAndNonceProtection:true},null,2));
   process.exit(0);
 }
-const {archive,contract}=preflight();const adapted=build(archive,null,{library:true,assignments:{[target]:'neonNight',[other]:'robot_titan'}});assert(adapted.changes.includes('native avatar editor entry'));for(const value of Object.values(adapted.patched))execFileSync(process.execPath,['--check','--input-type=module'],{input:value,stdio:'pipe'});
+const checked=preflight(),{archive,contract}=checked;const adapted=build(archive,null,{library:true,assignments:{[target]:'neonNight',[other]:'robot_titan'}});assert(adapted.changes.includes('native avatar editor entry'));for(const value of Object.values(adapted.patched))execFileSync(process.execPath,['--check','--input-type=module'],{input:value,stdio:'pipe'});
 const appModule=contract.app;
 // The 0.79.4 app assigns X to its JSX runtime and Y to React. Exercise the
 // transformed bridges against only the release's actual React namespace so a
@@ -113,10 +113,13 @@ assert(!adapted.patched[appModule].includes('__AVATAR_INITIAL_ASSIGNMENTS__'));a
 const empty=build(archive,null,{library:true});assert(!empty.patched[appModule].includes(target));
 const rebaked=empty.withAssignments({[other]:'robot_jelly'});assert(empty.patched[appModule].includes(other));assert.notEqual(rebaked[appModule],empty.hashes[appModule]);
 assert.throws(()=>empty.withAssignments({[other]:'sphere'}),/Unknown library character/);
-assert.throws(()=>build({contract,read:path=>path.endsWith(contract.editor.file)?Buffer.from('changed'):archive.read(path)},target,{shape:'neonNight',library:true}),/editor source hash/);
-assert.throws(()=>build({contract:{version:'unregistered'},read:archive.read},null,{library:true}),/Unsupported app identity/);
-// Even a caller-supplied contract cannot replace the registered release hashes.
+const incompatible=error=>error.code==='AVATAR_INTERFACE_CHANGED';
+assert.throws(()=>build({...archive,read:path=>path.endsWith(contract.editor.file)?Buffer.from('changed'):archive.read(path)},target,{shape:'neonNight',library:true}),incompatible);
+// The installed version and caller's guessed bindings cannot select a profile.
+const relabeled=build({...archive,actualVersion:'99.0.0',contract:{version:'unregistered',shape:'wrongBinding'}},null,{library:true});
+assert.equal(relabeled.contract.version,contract.version);
+assert.deepEqual(relabeled.hashes,build(archive,null,{library:true}).hashes);
 const altered=Buffer.from('different common module');
-assert.throws(()=>build({contract:{...contract,commonSHA256:sha(altered)},read:()=>altered},null,{library:true}),/Source hash mismatch/);
-const report={passed:true,appVersion:contract.version,nativePickerCards:libraryCharacters.length,thumbnailImagesDistinct:true,searchAndCollections:true,everyBotGetsLibraryEditor:true,groupsKeepVendorEditor:true,perBotIndependentSelection:true,restoreClearsOnlyThatBot:true,perBotActivity:true,bridgeContextResolution:true,releaseReactBindingsExecuted:true,legacyNeonBridgeExecuted:true,configMigratesV1:true,rebakeAfterSelection:true,cancelDoesNotApply:true,applyOnlyLocalSelection:true,rawOfficialEditorPropsPreserved:true,emptyOfficialColorUsesNativeFallback:true,setupHtmlEscaped:true,setupPathAndOriginChecks:true,opaqueOriginRequiresFormToken:true,setupSuccessfulCommitOnce:true,editorInputHashPinned:true,patchedModuleSyntaxChecked:true};
+assert.throws(()=>build({...archive,contract:{...contract,commonSHA256:sha(altered)},read:path=>path.endsWith(contract.common)?altered:archive.read(path)},null,{library:true}),incompatible);
+const report={passed:true,appVersion:checked.version,adapterVersion:contract.version,versionIndependentSelection:true,callerBindingsIgnored:true,nativePickerCards:libraryCharacters.length,thumbnailImagesDistinct:true,searchAndCollections:true,everyBotGetsLibraryEditor:true,groupsKeepVendorEditor:true,perBotIndependentSelection:true,restoreClearsOnlyThatBot:true,perBotActivity:true,bridgeContextResolution:true,releaseReactBindingsExecuted:true,legacyNeonBridgeExecuted:true,configMigratesV1:true,rebakeAfterSelection:true,cancelDoesNotApply:true,applyOnlyLocalSelection:true,rawOfficialEditorPropsPreserved:true,emptyOfficialColorUsesNativeFallback:true,setupHtmlEscaped:true,setupPathAndOriginChecks:true,opaqueOriginRequiresFormToken:true,setupSuccessfulCommitOnce:true,editorInputHashPinned:true,patchedModuleSyntaxChecked:true};
 mkdirSync(new URL('./evidence/tool/',import.meta.url),{recursive:true});writeFileSync(new URL('./evidence/tool/offline-ui-verification.json',import.meta.url),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));

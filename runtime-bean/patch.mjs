@@ -6,15 +6,16 @@ import {libraryCharacters} from './library.mjs';
 import {avatarChoices,avatarChoice,photoDataUrls} from './avatar-catalog.mjs';
 import {normalizeAssignments} from './config.mjs';
 import {patchCommon} from './common-contract.mjs';
+import {selectCompatibleContract} from './compatibility.mjs';
 
 export const appPath='/Applications/Grok Bot.app';
 export const asarPath=join(appPath,'Contents/Resources/app.asar');
 export const sha=data=>createHash('sha256').update(data).digest('hex');
 // Private names can change even in a patch release. Bind each field only after
-// checking the corresponding release's signed identity, ASAR and module hashes.
+// checking signed identity, ASAR integrity, reviewed modules and import relationships.
 const helper='chunk-rolldown-runtime-BCiCTKAo.js';
 const helperSHA256='f85e715d54a11fa37b7774ad77b536896ed01bfdfc98f485b678c81859fc8e2e';
-const contracts={
+export const contracts={
   '0.78.4':{
     version:'0.78.4', officialHash:'cb4d43f733076d4c441907cd427691bcebab6ada2f03d913991d04bf5ae59d93',
     common:'index.eager-common-DbK3Oi_r.js', commonSHA256:'fc17d4622e059ba7de70cc54d18c7fdc64a09b8d823c1904482181f21968e933',
@@ -39,27 +40,45 @@ const contracts={
     shape:'cO',color:'lO',classification:'dO',mark:'jO',agent:'QO',agentMark:'MO',display:'ww',grid:'_7e',staticSource:'ek',pointer:'Cw',
     rosterState:'sO',idle:'nO',react:'Y',engineFill:'mi',
   },
+  '1.0.1':{
+    version:'1.0.1', officialHash:'171d607e9faf339ca9a66c0c0113c23c390ac577ca39a72df23b0fdf74dcd2e9',
+    common:'index.eager-common-1bSx8o0X.js', commonSHA256:'f436f30a2d0cfd0a683e4ae07d6b934c07f7df7b33535df75fd40262dd13062f',
+    app:'index.eager-app-C1EubAxZ.js', appSHA256:'5d228ad567d3262c3232d3206b707b2fbab71f1bcc5eea56675e70825015b06e',
+    editor:{file:'chunk-agent-avatar-editor-BqsLgkXH.js',sha256:'c46920c8eccb2ff02750749bd85ac47b3c1384658ee7169132f4626cc6b4d240'},helper,
+    shape:'gO',color:'_O',classification:'yO',mark:'jO',agent:'JO',agentMark:'MO',display:'rT',grid:'Qrt',staticSource:'XO',pointer:'nT',
+    rosterState:'ort',idle:'fO',react:'X',engineFill:'bi',profilePointerRef:'l',
+    editorEntry:'A5e(e,`avatar-editor-import`).component(e=>e.AgentAvatarEditor)',
+    editorWrappedEntry:'A5e(e,`avatar-editor-import`).component(e=>avatarWrapEditor(e.AgentAvatarEditor))',
+  },
 };
+const dependencyFingerprints=JSON.parse(readFileSync(new URL('./compatibility-dependencies.json',import.meta.url)));
 for(const contract of Object.values(contracts)){
+  if(dependencyFingerprints[contract.version])contract.dependencies=Object.freeze(dependencyFingerprints[contract.version]);
   Object.freeze(contract.editor);
   Object.freeze(contract);
 }
 Object.freeze(contracts);
-export const supportedVersions=Object.freeze(Object.keys(contracts));
-function installedContract(){
-  const plist=JSON.parse(execFileSync('/usr/bin/plutil',['-convert','json','-o','-',join(appPath,'Contents/Info.plist')],{encoding:'utf8'}));
-  if(plist.CFBundleIdentifier!=='com.anysphere.sand'||!Object.hasOwn(contracts,plist.CFBundleShortVersionString))throw Error('Unsupported app identity/version; no patch applied.');
-  return {plist,contract:contracts[plist.CFBundleShortVersionString]};
+// These label reviewed adapters; they are not an installed-version allowlist.
+export const verifiedVersions=Object.freeze(Object.keys(contracts));
+function failure(code,message,cause){const error=Error(message,{cause});error.code=code;return error}
+function installedInfo(){
+  let plist;
+  try{plist=JSON.parse(execFileSync('/usr/bin/plutil',['-convert','json','-o','-',join(appPath,'Contents/Info.plist')],{encoding:'utf8',stdio:['ignore','pipe','pipe']}))}
+  catch(cause){throw failure('APP_NOT_FOUND','Cannot read the installed Grok Bot app.',cause)}
+  if(plist.CFBundleIdentifier!=='com.anysphere.sand')throw failure('APP_IDENTITY','Unexpected app identity; no patch applied.');
+  return plist;
 }
 // Rename only our injected bindings. Never translate identifiers across the
 // vendor module: in 0.78.5 its old display identifier hT is the pointer handler.
-function bindAppHelpers(source,version){
+export function bindAppHelpers(source,version){
   if(version==='0.78.4')return source;
   const names=version==='0.78.5'
     ?{hT:'_T',FO$avatar:'IO$avatar',PO:'FO',AO:'jO',fT:'mT',mT:'gT',GO:'KO'}
     :version==='0.79.4'
       ?{X:'Y',hT:'ww',FO$avatar:'jO$avatar',PO:'AO',AO:'SO',fT:'V1e',mT:'W1e',oo:'eo',GO:'qO',ji:'Gi',Di:'Ea',Ii:'la',wi:'xa',wu:'Zd'}
-      :null;
+      :version==='1.0.1'
+        ?{hT:'rT',FO$avatar:'jO$avatar',PO:'AO',AO:'EO',fT:'m6e',mT:'_6e',oo:'Co',GO:'UO',ji:'Qi',Di:'Na',Ii:'ga',wi:'Oa',wu:'gf'}
+        :null;
   if(names==null)throw Error('Unsupported app helper bindings: '+version);
   const identifiers=Object.keys(names).map(name=>name.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|');
   return source.replace(new RegExp('\\b(?:'+identifiers+')\\b','g'),name=>names[name]);
@@ -81,17 +100,18 @@ export function readArchive(){
   return {raw,header,tree,read(path){let n=tree;for(const p of path.split('/'))n=n.files?.[p];if(!n||!('offset'in n))throw Error(`Missing packed resource: ${path}`);return raw.subarray(base+Number(n.offset),base+Number(n.offset)+n.size);}};
 }
 export function preflight(){
-  if(process.platform!=='darwin'||process.arch!=='arm64')throw Error('Only macOS Apple Silicon is supported.');
-  const {plist,contract}=installedContract();
+  if(process.platform!=='darwin'||process.arch!=='arm64')throw failure('APP_ARCHITECTURE','Only macOS Apple Silicon is supported.');
+  const plist=installedInfo();
   const architectures=execFileSync('/usr/bin/lipo',['-archs',join(appPath,'Contents/MacOS/Grok Bot')],{encoding:'utf8'}).trim().split(/\s+/);
-  if(!architectures.includes('arm64'))throw Error('Only macOS Apple Silicon builds are supported.');
-  execFileSync('/usr/bin/codesign',['--verify','--deep','--strict','--test-requirement','=anchor apple generic and certificate leaf[subject.OU] = "DCNK4UB866"',appPath],{stdio:'pipe'});
-  const archive=readArchive(),hash=sha(archive.raw);
-  if(hash!==contract.officialHash)throw Error(`App differs from the verified official ${contract.version}; refusing to load.`);
-  if(plist.ElectronAsarIntegrity?.['Resources/app.asar']?.hash!==sha(archive.header))throw Error('ASAR integrity mismatch.');
-  if(sha(archive.read('dist/renderer/assets/'+contract.helper))!==helperSHA256)throw Error('Source hash mismatch: runtime helper');
-  archive.contract=contract;
-  return {archive,contract,version:contract.version,officialHash:hash,officialSignatureVerified:true};
+  if(!architectures.includes('arm64'))throw failure('APP_ARCHITECTURE','Only macOS Apple Silicon builds are supported.');
+  try{execFileSync('/usr/bin/codesign',['--verify','--deep','--strict','--test-requirement','=anchor apple generic and certificate leaf[subject.OU] = "DCNK4UB866"',appPath],{stdio:'pipe'})}
+  catch(cause){throw failure('APP_SIGNATURE','Official Grok Bot signature verification failed; no patch applied.',cause)}
+  const archive=readArchive(),hash=sha(archive.raw),integrity=plist.ElectronAsarIntegrity?.['Resources/app.asar'];
+  if(integrity?.algorithm!=='SHA256'||integrity.hash!==sha(archive.header))throw failure('APP_INTEGRITY','ASAR integrity mismatch; no patch applied.');
+  const compatibility=selectCompatibleContract({archive,contracts,version:plist.CFBundleShortVersionString,helperSHA256});
+  archive.contract=compatibility.contract;
+  archive.actualVersion=compatibility.actualVersion;
+  return {archive,contract:compatibility.contract,version:compatibility.actualVersion,adapterVersion:compatibility.adapterVersion,compatibilityMode:compatibility.mode,compatibilityChecks:compatibility.checks,officialHash:hash,officialSignatureVerified:true};
 }
 const assignmentsToken='__AVATAR_INITIAL_ASSIGNMENTS__';
 // Library mode serves every Bot: `assignments` maps Bot IDs to characters and can be
@@ -105,9 +125,8 @@ export function build(archive,id,{audit=false,demo=false,library=false,shape,ass
   if((!usesLibrary||id!=null)&&!/^[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}$/.test(id??''))throw Error('Bot ID must be a lowercase UUID.');
   const initial=usesLibrary?normalizeAssignments(assignments??(id!=null&&shape!==undefined?{[id]:shape}:{})):null;
   const originals={},patched={},changes=[];
-  const version=archive.contract?.version??installedContract().contract.version;
-  if(!Object.hasOwn(contracts,version))throw Error('Unsupported app identity/version; no patch applied.');
-  const contract=contracts[version];
+  // Never trust caller-supplied binding names or hashes, including archive.contract.
+  const {contract}=selectCompatibleContract({archive,contracts,version:archive.actualVersion,helperSHA256});
   const {common,app,editor,display,pointer,react,engineFill}=contract;
   for(const [name,hash] of [[common,contract.commonSHA256],[app,contract.appSHA256]]){
     const raw=archive.read('dist/renderer/assets/'+name);
@@ -126,7 +145,7 @@ export function build(archive,id,{audit=false,demo=false,library=false,shape,ass
   const read=name=>readFileSync(new URL('./'+name,import.meta.url),'utf8');
   patched[common]=patchCommon({version:contract.version,source:originals[common],shape,appearance,usesLibrary,read,replace,libraryCharacters});
   let s=originals[app];
-  const profileAnchor=`${pointer}(e,e=>c.current`;
+  const profileAnchor=`${pointer}(e,e=>${contract.profilePointerRef??'c'}.current`;
   const rosterLead=`let d=${contract.rosterState}(u),f=i??d`;
   const rosterTail=`p=f!==${contract.idle},m;`;
   const rosterAnchor=`${rosterLead},${rosterTail}`;
@@ -146,7 +165,7 @@ export function build(archive,id,{audit=false,demo=false,library=false,shape,ass
     ])s=replace(s,`function ${fn}(e){`,`function ${fn}(e){return avatarBound(${fn===contract.mark?'avatarMarkEntry':fn+'$avatar'},e,${idExpr},${transform})}function ${fn}$avatar(e){`,label+' binding');
     s=replace(s,'if(n?.avatarDataUrl!=null&&n.avatarDataUrl.length>0)return{src:n.avatarDataUrl}','if(!avatarShapeFor(n?.id)&&n?.avatarDataUrl!=null&&n.avatarDataUrl.length>0)return{src:n.avatarDataUrl}','static source guard');
     if(sha(archive.read('dist/renderer/assets/'+editor.file))!==editor.sha256)throw Error('Avatar editor source hash mismatch');
-    s=replace(s,'.then(({AgentAvatarEditor:e})=>({default:e}))','.then(({AgentAvatarEditor:e})=>({default:avatarWrapEditor(e)}))','native avatar editor entry');
+    s=replace(s,contract.editorEntry??'.then(({AgentAvatarEditor:e})=>({default:e}))',contract.editorWrappedEntry??'.then(({AgentAvatarEditor:e})=>({default:avatarWrapEditor(e)}))','native avatar editor entry');
     s=replace(s,`function ${contract.grid}(e){`,`function ${contract.grid}(e){return ${react}.createElement(avatarChoiceFor(e.agent?.id)?avatarOfficialCharacterOptions:avatarVendorCharacterOptions,e)}function avatarVendorCharacterOptions(e){`,'native editor assigned-only grid adapter');
     s=replace(s,`function ${display}(e){`,`function ${display}(e){e=avatarLibraryProps(e);return avatarIsPhoto(e.shape)?${react}.createElement(AvatarPhotoMark,{...e,key:e.avatarBotId??e.sourceId??e.shape}):${react}.createElement(${display}$avatar,e)}function ${display}$avatar(e){`,'library surface state subscription');
     s=replace(s,`function ${contract.staticSource}(e,t){`,`function ${contract.staticSource}(e,t){const localPhoto=avatarPhotoFor(t.id);if(localPhoto)return{src:localPhoto};`,'local photo static source');
@@ -192,4 +211,13 @@ export function build(archive,id,{audit=false,demo=false,library=false,shape,ass
   return {contract,patched,changes,hashes:hashes(),library:usesLibrary,assignments:initial,
     // Re-bakes the app module after a selection so a renderer reload keeps every Bot's choice.
     withAssignments(value){patched[app]=bake(value);return hashes()}};
+}
+
+// Compile only; this never executes the rewritten app modules.
+export function checkBuiltModules(adapted){
+  for(const source of Object.values(adapted.patched)){
+    try{execFileSync(process.execPath,['--check','--input-type=module'],{input:source,stdio:'pipe'})}
+    catch(cause){throw failure('AVATAR_PATCH_INVALID','Avatar module syntax validation failed; no patch applied.',cause)}
+  }
+  return true;
 }

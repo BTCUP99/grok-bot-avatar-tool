@@ -2,9 +2,9 @@
 
 给 Grok Bot 换上原创头像：**31 款动态角色 + 11 款虚拟人物头像，共 42 款**。每个独立 Bot 都能在自己的头像窗口选择，并分别记住选择。
 
-**[下载 macOS Apple Silicon 完整包](https://github.com/BTCUP99/grok-bot-avatar-tool/releases/download/v1.4.4/GrokBotAvatarTool-1.4.4-macOS-arm64.zip)** · [版本说明与其他下载](https://github.com/BTCUP99/grok-bot-avatar-tool/releases/tag/v1.4.4) · [报告兼容问题](https://github.com/BTCUP99/grok-bot-avatar-tool/issues)
+**[下载 macOS Apple Silicon 完整包](https://github.com/BTCUP99/grok-bot-avatar-tool/releases/download/v1.5.0/GrokBotAvatarTool-1.5.0-macOS-arm64.zip)** · [版本说明与其他下载](https://github.com/BTCUP99/grok-bot-avatar-tool/releases/tag/v1.5.0) · [报告兼容问题](https://github.com/BTCUP99/grok-bot-avatar-tool/issues)
 
-当前发布为 **v1.4.4 社区预览版**。完整包自带 Node.js，解压后双击启动，无需安装开发环境。请下载名称带 **macOS-arm64** 的 ZIP；GitHub 自动生成的 Source code 压缩包只包含源码。
+当前发布为 **v1.5.0 社区预览版**。完整包自带 Node.js，解压后双击启动，无需安装开发环境。请下载名称带 **macOS-arm64** 的 ZIP；GitHub 自动生成的 Source code 压缩包只包含源码。
 
 ## 头像展示
 
@@ -46,12 +46,12 @@
 | 项目 | 当前支持 |
 | --- | --- |
 | 系统 | macOS，Apple Silicon / M 系列芯片 |
-| 官方客户端 | Grok Bot **0.78.4、0.78.5、0.79.4** 的已核验构建 |
+| 官方客户端 | 已验证 **1.0.1、0.79.4、0.78.5、0.78.4**；其他版本按头像相关代码检查 |
 | 安装位置 | `/Applications/Grok Bot.app` |
 | 选择范围 | 每个独立 Bot；群组使用官方头像编辑器 |
 | 保存范围 | 当前工具目录的本机配置，不修改云端头像 |
 
-Windows、Linux、Intel Mac 和其他客户端版本暂不支持。工具会检查版本、架构、官方签名与文件哈希，不匹配时停止加载。
+Windows、Linux 和 Intel Mac 暂不支持。工具检查架构、官方签名、文件完整性、头像相关模块及其依赖关系；客户端版本号变化本身不会阻止启动。
 
 ## 下载后怎么用
 
@@ -74,7 +74,9 @@ Windows、Linux、Intel Mac 和其他客户端版本暂不支持。工具会检�
 
 ## 客户端更新与维护
 
-**本工具依赖特定版本的客户端内部结构。Grok Bot 更新后，包括小版本更新，工具也可能暂时不可用。** 当前可以使用不代表后续版本一定兼容；不要删除版本、签名或哈希检查来强行运行。
+**客户端版本号变化本身不会停用工具。** 启动时会查找实际使用的头像模块，核对已验证的代码指纹、依赖关系与接入位置。即使版本号或安装包中的无关资源改变，只要这些检查通过，就能复用已有适配器。
+
+当前采用保守的模块级检查：头像相关 JavaScript 模块及其依赖有改动，即使只是模块内其他功能改变，也可能需要重新适配。不会仅凭函数同名或几个关键词就放行。1.0.1 已建立独立模块与依赖基线；旧 0.78/0.79 适配器保留原构建指纹回退。官方签名与文件完整性检查继续保留；无法确认兼容时停止加载，并给出具体原因。这不保证未来所有客户端版本都能自动兼容。
 
 遇到不兼容时，先查看 [发行版](https://github.com/BTCUP99/grok-bot-avatar-tool/releases) 是否有新版；也可以在 Issues 中提供客户端版本、Mac 芯片与去除个人信息后的错误提示。维护者会尽量及时跟进已确认的兼容问题，完成检查后发布适配版本。没有自动更新或固定修复时限的保证。
 
@@ -91,6 +93,7 @@ Windows、Linux、Intel Mac 和其他客户端版本暂不支持。工具会检�
 源码需要 Node.js 22+；本机打包另需 Python 3。没有 npm 运行时依赖。
 
 ```sh
+node runtime-bean/tool.mjs --check  # 只检查兼容性，不启动客户端
 npm run test:portable   # 无需安装 Grok Bot；供 GitHub CI 使用
 npm test                # 需在受支持的 Apple Silicon Mac 上安装已核验官方客户端
 npm run prepare:runtime
@@ -100,7 +103,7 @@ npm run test:package
 
 项目保留 `runtime-bean/` 与 `avatar-designs/` 的既有结构；发布内容由显式白名单生成。源码入 Git，完整包和源码包放 GitHub Releases。开发与发布流程见 [贡献指南](CONTRIBUTING.md)、[发布检查](docs/RELEASING.md)、[更新记录](CHANGELOG.md) 和 [安全说明](SECURITY.md)。
 
-0.79.4 已通过本机官方引擎回归及官方界面组件的隔离验证：42 款选择、两 Bot 独立操作、11 款人物在 36/64 px 的 44 次转正/回位观察、31 款动态角色渲染、工作与完成状态反馈，以及选择后渲染器重载恢复。**本轮未重新完成当前账号的原生窗口退出重启与真实任务端到端验收。** GitHub CI 的 portable 检查不能替代这些本机测试，因此本次作为社区预览版发布。
+1.5.0 已在通过签名核验的 1.0.1 上完成本机官方引擎回归，并以官方 React、头像组件、样式与编辑器进行隔离验证：42 款选择、两个合成 Bot 独立选择/取消/恢复、11 款人物在 36/64 px 的 44 次转正/回位、31 款动态角色在两处尺寸的工作灯与完成开心/一次点头、重复完成去重、官方头像选项与渲染器重载后恢复均通过。跨版本标签、无关资源更新、变更模块、混用依赖和伪造绑定的兼容检查通过。当前账号的原生窗口退出重启与真实任务端到端验收未在本轮执行；旧客户端本轮未重新运行。 GitHub CI 的 portable 检查不能替代本机或实际账号窗口验收，因此本次作为社区预览版发布。
 
 ## 非官方声明
 

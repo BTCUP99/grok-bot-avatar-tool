@@ -1,5 +1,5 @@
 // Starts the vendor-signed app and our external loader. Never changes the app bundle.
-import {preflight,appearanceFor} from './patch.mjs';
+import {preflight,appearanceFor,build,checkBuiltModules} from './patch.mjs';
 import {avatarChoices as libraryCharacters,avatarChoice as libraryCharacter} from './avatar-catalog.mjs';
 import {bots} from './bots.mjs';
 import {readConfig,writeConfig} from './config.mjs';
@@ -13,7 +13,7 @@ if(Number(process.versions.node.split('.')[0])<22)throw Error('Node.js 22 or new
 const {values}=parseArgs({options:{'bot-id':{type:'string'},'bot-name':{type:'string'},shape:{type:'string'},'list-bots':{type:'boolean'},'list-shapes':{type:'boolean'},library:{type:'boolean',default:false},audit:{type:'boolean',default:false},demo:{type:'boolean',default:false}}});
 if(values['list-bots']){console.table(bots());process.exit(0);}
 if(values['list-shapes']){console.table(libraryCharacters.map(({number,name,shape})=>({number,name,shape})));process.exit(0);}
-preflight();
+const checked=preflight();
 let id=values['bot-id'];
 if(values['bot-name']){
   const matches=bots().filter(b=>b.name===values['bot-name']);
@@ -41,6 +41,8 @@ if(library){
   if(!uuid.test(id??''))throw Error('First run: node start.mjs --bot-name "your test bot name"');
   config={...config,botId:id,shape};
 }
+// Validate the complete adaptation before opening or writing any configuration.
+checkBuiltModules(build(checked.archive,library?undefined:id,{library,shape,assignments:library?config.assignments:undefined,demo:values.demo,audit:values.audit}));
 const processes=execFileSync('/bin/ps',['-axo','command='],{encoding:'utf8'}).split('\n');
 if(processes.some(p=>/^\/.*Grok Bot(?: Bean Test(?:-0\.78\.1)?)?\.app\/Contents\/MacOS\/Grok Bot(?: |$)/.test(p.trim())))throw Error('Please quit Grok Bot with Command-Q first; your drafts will not be forcibly closed.');
 mkdirSync(new URL('./evidence/',import.meta.url),{recursive:true});

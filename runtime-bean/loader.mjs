@@ -1,5 +1,5 @@
 import {CDP,target} from './cdp.mjs';
-import {preflight,build,sha,asarPath,appearanceFor} from './patch.mjs';
+import {preflight,build,checkBuiltModules,sha,asarPath,appearanceFor} from './patch.mjs';
 import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {parseArgs} from 'node:util';
@@ -16,6 +16,7 @@ if(!library&&!id)throw Error('Usage: node loader.mjs --bot-id YOUR_UUID [--audit
 let config=library?readConfig():null;
 const checked=preflight();
 const adapted=build(checked.archive,id,{audit:values.audit,demo:values.demo,library,shape,assignments:config?.assignments});
+checkBuiltModules(adapted);
 const {patched,changes}=adapted;let {hashes}=adapted;
 checked.archive=null;
 const page=await target();
@@ -30,7 +31,7 @@ if(!command.startsWith('/Applications/Grok Bot.app/Contents/MacOS/Grok Bot ')||!
 const c=new CDP(page.webSocketDebuggerUrl), served=[];
 const evidence=new URL('./evidence/',import.meta.url);mkdirSync(evidence,{recursive:true});
 let stopping=false,loaded=false;
-const report={startedAt:new Date().toISOString(),method:'CDP Fetch in-memory replacement',shape,avatarName:appearance.name,officialAsarSHA256:checked.officialHash,officialSignatureVerified:true,targetBotId:id??null,assignedBots:library?Object.keys(config.assignments).length:null,botWrites:false,audit:values.audit,appearanceDemo:values.demo,library,changes,hashes,served,loaded:false};
+const report={toolVersion:JSON.parse(readFileSync(new URL('../package.json',import.meta.url))).version,startedAt:new Date().toISOString(),method:'CDP Fetch in-memory replacement',shape,avatarName:appearance.name,appVersion:checked.version,adapterVersion:checked.adapterVersion,compatibilityMode:checked.compatibilityMode,compatibilityChecks:checked.compatibilityChecks,officialAsarSHA256:checked.officialHash,officialSignatureVerified:true,targetBotId:id??null,assignedBots:library?Object.keys(config.assignments).length:null,botWrites:false,audit:values.audit,appearanceDemo:values.demo,library,changes,hashes,served,loaded:false};
 const save=()=>writeFileSync(new URL('runtime-session.json',evidence),JSON.stringify(report,null,2)+'\n');
 c.on('Fetch.requestPaused',async p=>{
   const name=decodeURI(p.request.url).split('/').at(-1);
@@ -55,7 +56,7 @@ c.on('Runtime.consoleAPICalled',p=>{
       }catch(error){console.error('Selection not saved:',error.message)}
     }
   }
-  if(p.args?.[0]?.value===`[Apricot Runtime] native avatar adapter ${checked.version} loaded`){
+  if(p.args?.[0]?.value===`[Apricot Runtime] native avatar adapter ${checked.contract.version} loaded`){
     loaded=true;report.loaded=true;report.loadedAt=new Date().toISOString();save();console.log('ACTIVE: original Grok Bot + runtime '+appearance.name);
   }
 });
